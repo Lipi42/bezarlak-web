@@ -1,5 +1,6 @@
 bower_components/*
 public/*
+www/*
 
 lib-cov
 *.seed
