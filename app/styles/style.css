@@ -1,0 +1,175 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  /* background-image: url(../design/background.jpg);
+  background-size: contain;
+  background-position: center top;
+  background-repeat: repeat-y; */
+}
+
+.toggle-topbar {
+  position: relative !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#content {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-bottom:1rem;
+}
+
+video#bgvid {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+  background: url(video/polina.jpg) no-repeat;
+  background-size: cover;
+}
+
+#language {
+  width: 100%;
+  text-align:center;
+  background-color: #333;
+  height: 2rem;
+}
+
+#language a {
+  position: relative;
+  top: 0.45rem;
+  color: #eee;
+}
+
+#language .close-language {
+  position: relative;
+  left: 1rem;
+}
+
+div.header {
+  height: 100px;
+}
+
+div.row {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.top-bar div.row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#content .row {
+  margin-bottom: 2rem;
+}
+
+.pricing-table li.title {
+  color: #333;
+  background: none;
+  height: 8rem;
+  background-position: center center;
+  position: relative;
+}
+
+.pricing-table li.bullet-item {
+  font-size: 1.2rem !important;
+}
+
+li.title h2 {
+  position: relative;
+  padding-top: none;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem;
+}
+
+h2 {
+  font-family: "Lobster";
+  font-size: 3.3rem;
+}
+
+h3.use-case {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.bordered {
+  border: 1px solid #999;
+}
+
+#content h1 {
+  margin: 3.5rem auto 2rem auto;
+  padding-left: 0;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 1px solid #999;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+blockquote {
+  margin-top: 1rem;
+}
+
+h3 {
+  line-height: 1.675em;
+  margin-bottom: 2rem;
+}
+
+#content img {
+}
+
+#content p {
+  font-size: 1.2rem;
+}
+
+#vegasModal {
+}
+#vegasModal img, #scienceModal img {
+  margin-bottom: 2rem;
+}
+#scienceModal {
+  max-height: 900px;
+  max-width: 1200px;
+}
+
+#hero {
+  width: 100%;
+  text-align: center;
+}
+
+#hero img {
+  width: 100%;
+  top: 0;
+}
+
+.inner-wrap {
+  min-height: 100%;
+  position: relative;
+}
+
+.off-canvas-wrap {
+  min-height: 100%;
+}
+
+footer {
+  width: 100%;
+  background-color: rgba(40, 40, 40, 0.9);
+  padding: 1em;
+}
+
+footer p {
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+form .row {
+  margin-bottom: 1rem !important;
+}
+
+form {
+  margin-bottom: 1.9rem;
+}
