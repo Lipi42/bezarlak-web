@@ -125,15 +125,11 @@
       </div>
     </div>
     <div class="row text-center">
-      <div class="small-12 medium-4 columns">
-        <h3 class="use-case">{{t 'bezarlak.1-box-cim'}}</h3>
-        <p>{{t 'bezarlak.1-box-szoveg'}}</p>
-      </div>
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 medium-6 columns">
         <h3 class="use-case">{{t 'bezarlak.2-box-cim'}}</h3>    
         <p>{{t 'bezarlak.2-box-szoveg'}}</p>  
       </div>
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 medium-6 columns">
         <h3 class="use-case">{{t 'bezarlak.3-box-cim'}}</h3>
         <p>{{t 'bezarlak.3-box-szoveg'}}</p>
       </div>
@@ -194,8 +190,7 @@
       <div class="row">.
         <div class="small-12 hide-for-small-only medium-4 columns">
           <img src="/design/science-bg.jpg">
-          <img src="/design/science.jpg">
-          <img src="/design/science.jpg">
+          <img src="/design/science-2.jpg">
         </div>
         <div class="small-12 medium-6 medium-offset-1 columns">
           <h2>{{t 'felugro.science-cim'}}</h2>
@@ -205,15 +200,9 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="lang/arak">
-     <div class="row" style="margin-bottom: 3rem;">
-      <div class="small-12 columns bg">
-        <h1 class="medium-text-center">{{t 'arak.cim'}}</h1>
-        <p>{{t 'arak.szoveg'}} </p>
-      </div>
-    </div>
     <div class="row">
       <div class="small-12 medium-5 columns text-left">
-        <h3 class="medium-text-center">{{t 'arak.listaar-cim'}}</h3>
+        <h1 class="medium-text-center">{{t 'arak.listaar-cim'}}</h1>
         <form>
           <div class="row">
             <label>{{t 'arak.listaar-terem'}}
@@ -263,7 +252,7 @@
       </div>
 
       <div class="small-12 medium-5 medium-offset-2 columns text-left">
-        <h3 class="medium-text-center">{{t 'arak.aktualis-cim'}}</h3>
+        <h1 class="medium-text-center">{{t 'arak.aktualis-cim'}}</h1>
         <p style="margin-bottom: 2rem;">{{t 'arak.aktualis-fb'}}</p>
         <div style="margin-left: auto; margin-right: auto; text-align: center;">
           <div id="fb-root"></div>
@@ -290,7 +279,7 @@
       <div class="small-12 medium-6 columns text-left">
         <h1 class="medium-text-center">{{t 'foglalas.telefon-cim'}}</h3>
         <p>{{t 'foglalas.telefon-elso-bekezdes'}}</p>
-        <div class="row" style="padding-left: 0;">
+        <div class="row" style="padding-left: 1rem;">
           <div class="small-4 columns"><p style="font-weight: bold;">{{t 'foglalas.telefon-masodik-bekezdes'}}</p></div>
           <div class="small-8 columns">
             <p>{{t 'foglalas.telefon-harmadik-bekezdes'}}</p>
@@ -305,7 +294,27 @@
     <div class="row">
       <div class="small-12 medium-6 columns text-left">
         <h1 class="medium-text-center">{{t 'kapcsolat.kerdes-cim'}}</h1>
-        <p>{{t 'kapcsolat.kerdes-szoveg'}}</p>
+        <p style="margin-bottom: 2rem;" class="text-center">{{t 'kapcsolat.kerdes-szoveg'}}</p>
+
+        <div class="row">
+          <a target="_blank" href="http://facebook.com/bezarlak" class="small-4 medium-2 medium-offset-3 columns"><span class="webicon facebook large">BezárLak a Facebookon</span></a>
+          <a target="_blank" href="http://twitter.com/bezarlak" class="small-4 medium-2 columns"><span class="webicon twitter large">BezárLak a Twitteren</span></a>
+          <a href="m&#97;ilto:&#105;&#110;&#102;&#111;&#64;&#98;&#101;&#122;&#97;&#114;&#108;&#97;&#107;&#46;&#104;&#117;" class="small-4 medium-2 end columns"><span class="webicon mail large">BezárLak email</span></a>
+        </div>
+
+        <div class="row" style="margin-top: 2rem; padding-left: 1rem;">
+          <div class="small-12 columns text-center"><p style="font-weight: bold; margin-bottom: 0.4rem;">{{t 'foglalas.telefon-masodik-bekezdes'}}</p>
+            <p style="margin-bottom: 1.6rem;">{{t 'foglalas.telefon-harmadik-bekezdes'}}</p>
+
+            <ul class="vcard" style="width: 100%; text-align: center;">
+              <li class="fn">BezárLak</li>
+              <li class="locality"><span class="postal-code">1115</span> <span class="locality">Budapest</span></li>
+              <li class="street-address">Szováta utca 2/b</li>
+              <li class="email"><a href="m&#97;ilto:&#105;&#110;&#102;&#111;&#64;&#98;&#101;&#122;&#97;&#114;&#108;&#97;&#107;&#46;&#104;&#117;?subject=" title="">&#105;&#110;&#102;&#111;&#64;&#98;&#101;&#122;&#97;&#114;&#108;&#97;&#107;&#46;&#104;&#117;</a></li>
+            </ul>
+
+          </div>
+        </div>
       </div>
 
       <div class="small-12 medium-6 columns text-left">
@@ -321,13 +330,6 @@
         <div style="margin-left: 5%;">
           <p style="margin-bottom: 3rem;">{{t 'kapcsolat.erkezes-hatodik-bekezdes'}}</p>
         </div>
-
-        <ul class="vcard" style="width: 100%; text-align: center;">
-          <li class="fn">BezárLak</li>
-          <li class="locality"><span class="postal-code">1115</span> <span class="locality">Budapest</span></li>
-          <li class="street-address">Szováta utca 2/b</li>
-          <li class="email"><a href="m&#97;ilto:&#105;&#110;&#102;&#111;&#64;&#98;&#101;&#122;&#97;&#114;&#108;&#97;&#107;&#46;&#104;&#117;?subject=" title="">&#105;&#110;&#102;&#111;&#64;&#98;&#101;&#122;&#97;&#114;&#108;&#97;&#107;&#46;&#104;&#117;</a></li>
-        </ul>
       </div>
     </div>
 

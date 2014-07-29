@@ -75,7 +75,7 @@ Ember.I18n.translations = {
     'kerdes-email': 'e-mailben: ', 
     'erkezes-cim': 'Hogyan érkeztek?',
     'erkezes-elso-bekezdes': 'A BezárLak szobái az alul látható címen találhatóak. Attól függően, hogy hogy szeretnél érkezni, két lehetőséget ajánlunk.',
-    'erkezes-masodik-bekezdes': 'Tömegközelekedéssel:',
+    'erkezes-masodik-bekezdes': 'Tömegközlekedéssel:',
     'erkezes-harmadik-bekezdes': '<strong>Karolina útig</strong> 19, 49 villamos, ',
     'erkezes-negyedik-bekezdes': 'vagy <strong>Tétényi útig</strong> 7, 87, 87A, 114, 173, 187, 213, 214 buszok.',
     'erkezes-otodik-bekezdes': 'Autóval:',
