@@ -27,7 +27,9 @@ App.Router.map(function() {
             this.route('science');
         });
         this.route('arak', { path: '/arak' });
-        this.route('foglalas', { path: '/foglalas' });
+        this.resource('foglalas', { path: '/foglalas' }, function() {
+            this.route('setmore');
+        });
         this.route('kapcsolat', { path: '/kapcsolat' });
     });
 });
@@ -111,7 +113,7 @@ App.LangArakView = Ember.View.extend({
         }(document, 'script', 'facebook-jssdk'));
     }
 });
-App.LangFoglalasView = Ember.View.extend({
+App.FoglalasView = Ember.View.extend({
 
 });
 
