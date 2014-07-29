@@ -170,3 +170,12 @@ App.LangArakController = Ember.Controller.extend({
         return Math.ceil(this.get('totalPrice')/people/10, 1)*10;
     }.property('totalPrice')
 });
+
+App.LangFoglalasController = Ember.Controller.extend({
+    actions: {
+        showSetmore: function() {
+            $("#setmore").show("medium");
+            $("#showSetmore").hide("medium");
+        }
+    }
+});
