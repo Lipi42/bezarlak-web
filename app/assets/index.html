@@ -2,6 +2,7 @@
 
 <html>
 <head>
+  <base href="/">
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BezárLak Szabadulós Játék Budapesten</title>
@@ -47,7 +48,7 @@
         <li>{{#link-to 'lang.index'}}<img src="/design/menu/fooldal.png" style="height: 2rem;"> {{t 'menu.BezárLak'}}{{/link-to}}</li>
         <li>{{#link-to 'szobak'}}<img src="/design/menu/szobak.png" style="height: 2rem;"> {{t 'menu.Szobák'}}{{/link-to}}</li>
         <li>{{#link-to 'lang.arak'}}<img src="/design/menu/arak.png" style="height: 2rem;"> {{t 'menu.Árak'}}{{/link-to}}</li>
-        <li>{{#link-to 'foglalas'}}<img src="/design/menu/foglalas.png" style="height: 2rem;"> {{t 'menu.Foglalás'}}{{/link-to}}</li>
+        <li>{{#link-to 'lang.foglalas'}}<img src="/design/menu/foglalas.png" style="height: 2rem;"> {{t 'menu.Foglalás'}}{{/link-to}}</li>
         <li>{{#link-to 'lang.kapcsolat'}}<img src="/design/menu/kapcsolat.png" style="height: 2rem;"> {{t 'menu.Kapcsolat'}}{{/link-to}}</li>
       </ul>
     </aside>
@@ -73,7 +74,7 @@
             <img src="/design/menu/arak.png">
             {{t 'menu.Árak'}}
           {{/link-to}}
-          {{#link-to 'foglalas' class='item'}}
+          {{#link-to 'lang.foglalas' class='item'}}
             <img src="/design/menu/foglalas.png">
             {{t 'menu.Foglalás'}}
           {{/link-to}}
@@ -86,12 +87,12 @@
     </div>
   </div>
 
-  <div id="video" class="hide-for-small-only">
+  <!-- <div id="video" class="hide-for-small-only">
     <video autoplay loop poster="polina.jpg" id="bgvid">
       <source src="video/polina.webm" type="video/webm">
       <source src="video/polina.mp4" type="video/mp4">
     </video>
-  </div>
+  </div> -->
 
   <div id="content">
     {{outlet}}
@@ -258,7 +259,7 @@
 
           {{#if capitaPrice}}<h3 class="text-center">Fejenként: {{capitaPrice}} Ft</h3>        <div class="row">
         <div class="row">
-          {{#link-to 'foglalas' class="button small-12 medium-centered columns"}}Foglalás{{/link-to}}
+          {{#link-to 'lang.foglalas' class="button small-12 medium-centered columns"}}Foglalás{{/link-to}}
           </div>
         </div>{{/if}}
       </div>
@@ -275,7 +276,7 @@
   </script>
 
 
-  <script type="text/x-handlebars" data-template-name="foglalas/setmore">
+  <script type="text/x-handlebars" data-template-name="lang/foglalas">
     <img src="/design/preloader.gif" style="position: absolute; top: 50%; left: 50%; margin-left: -64px; margin-top: -64px; z-index: -1;">
     <iframe src="http://bezarlak.setmore.com/" scrolling="no" style="width: 100%; height: 100%; min-height: 38rem;"frameborder="0"></iframe>
   </script>
