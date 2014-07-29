@@ -12,13 +12,13 @@ Ember.I18n.translations = {
     'mi-a-bezarlak': 'Mi a BezárLak?',
     'elso-sor': '60 perc rejtvényfejtés, csapatmunka, játékos feladatmegoldás.',
     'masodik-sor': 'Egy cél van: kijutni, mielőtt lejár az idő.',
-    'cta': 'Nézd meg szobáinkat!',
+    'cta': 'Nézd meg szobáinkat',
     '1-box-cim': 'Miről szól?',
     '1-box-szoveg': 'Lorem Ipsum',
-    '2-box-cim': 'Kik játszhatnak?',
-    '2-box-szoveg': 'Lorem Ipsum',
+    '2-box-cim': 'Kinek ajánljuk?',
+    '2-box-szoveg': 'Baráti társaságoknak <br /> Cégeknek, szervezeteknek <br />Aki szereti a kihívásokat',
     '3-box-cim': 'Hogy vehetek részt?',
-    '3-box-szoveg': 'Lorem Ipsum'
+    '3-box-szoveg': 'Szervezz csapatot <br /> Válasszatok termet <br/> Foglaljatok időpontot'
   },
 
   'szobak': {
@@ -51,7 +51,7 @@ Ember.I18n.translations = {
     'listaar-diak': 'Van legalább kettőtöknek érvényes diákigazolványa?',
     'listaar-voucher': 'Rendelkeztek voucherrel?',
     'listaar-fejenkent': 'Fejenként: ',
-    'foglalas': 'Foglalas',
+    'foglalas': 'Foglalás',
     'aktualis-cim': 'Aktuális akciónk',
     'aktualis-fb': 'Csatlakozz Facebook oldalunkhoz, hogy ne maradj le egyetlen akciónkról sem!'
   },
@@ -59,7 +59,7 @@ Ember.I18n.translations = {
   'foglalas': {
     'cim': 'Foglalás',
     'online-cim': 'Online foglalás',
-    'online-elso-bekezdes': 'Felületünkön keresztül <strong>legalább két órával</strong> előre foglalhatsz időpontot a két terem valamelyikébe.',
+    'online-elso-bekezdes': 'Felületünkön keresztül <strong>minimum két órával</strong> előre foglalhatsz időpontot a két terem valamelyikébe.',
     'online-masodik-bekezdes': 'Foglalásodról emailben azonnal visszajelzést küldünk, innentől kezdve érvényes és szeretettel várunk a választott időpontodon csapatoddal.',
     'online-gomb': 'Online foglalok',
     'telefon-cim': 'Telefonos foglalás',
@@ -74,7 +74,7 @@ Ember.I18n.translations = {
     'kerdes-telefon': 'Telefonon: ',
     'kerdes-email': 'e-mailben: ', 
     'erkezes-cim': 'Hogyan érkeztek?',
-    'erkezes-elso-bekezdes': 'A BezárLak szobái a lentebb lévő cím alatt található kertes házban találhatóak. Attól függően, hogy hogy szeretnél érkezni, két lehetőséget ajánlunk.',
+    'erkezes-elso-bekezdes': 'A BezárLak szobái az alul látható címen találhatóak. Attól függően, hogy hogy szeretnél érkezni, két lehetőséget ajánlunk.',
     'erkezes-masodik-bekezdes': 'Tömegközelekedéssel:',
     'erkezes-harmadik-bekezdes': '<strong>Karolina útig</strong> 19, 49 villamos, ',
     'erkezes-negyedik-bekezdes': 'vagy <strong>Tétényi útig</strong> 7, 87, 87A, 114, 173, 187, 213, 214 buszok.',
