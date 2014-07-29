@@ -113,29 +113,29 @@
   <script type="text/x-handlebars" data-template-name="lang/index"> 
 
     <div class="row" style="padding-bottom: 1.4rem;">
-      <h1 class="small-12 columns medium-text-center">Mi a BezárLak?</h1>
-      <p class="text-center hidden-for-small-only" style="font-size: 1.6rem; margin-bottom: 0.5rem;">60 perc rejtvényfejtés, csapatmunka, játékos feladatmegoldás.</p>
-      <p class="text-center hidden-for-small-only" style="font-size: 1.6rem;">Egy cél van: kijutni, mielőtt lejár az idő.</p>
-      <p class="visible-for-small-only" style="font-size: 1.2rem; margin-bottom: 0.5rem;">60 perc rejtvényfejtés, csapatmunka, játékos feladatmegoldás.</p>
-      <p class="visible-for-small-only" style="font-size: 1.2rem;">Egy cél van: kijutni, mielőtt lejár az idő.</p>
+      <h1 class="small-12 columns medium-text-center">{{t 'bezarlak.mi-a-bezarlak'}}</h1>
+      <p class="text-center hidden-for-small-only" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{t 'bezarlak.elso-sor'}}</p>
+      <p class="text-center hidden-for-small-only" style="font-size: 1.6rem;">{{t 'bezarlak.masodik-sor'}}</p>
+      <p class="visible-for-small-only" style="font-size: 1.2rem; margin-bottom: 0.5rem;">{{t 'bezarlak.elso-sor'}}</p>
+      <p class="visible-for-small-only" style="font-size: 1.2rem;">{{t 'bezarlak.masodik-sor'}}</p>
     </div>
     <div class="row">
       <div class="small-12 columns small-centered text-center" style="margin-bottom: 1rem;">
-        {{#link-to "szobak" class="button"}}Nézd meg szobáinkat!{{/link-to}}
+        {{#link-to "szobak" class="button"}}{{t 'bezarlak.cta'}}!{{/link-to}}
       </div>
     </div>
     <div class="row text-center">
       <div class="small-12 medium-4 columns">
-        <h3 class="use-case">Mi a feladat?</h3>
-        <p>Lorem ipsum</p>
+        <h3 class="use-case">{{t 'bezarlak.1-box-cim'}}</h3>
+        <p>{{t 'bezarlak.1-box-szoveg'}}</p>
       </div>
       <div class="small-12 medium-4 columns">
-        <h3 class="use-case">Kinek szól?</h3>    
-        <p>Lorem ipsum</p>  
+        <h3 class="use-case">{{t 'bezarlak.2-box-cim'}}</h3>    
+        <p>{{t 'bezarlak.2-box-szoveg'}}</p>  
       </div>
       <div class="small-12 medium-4 columns">
-        <h3 class="use-case">Hogy vehetek részt?</h3>
-        <p>Lorem ipsum</p>
+        <h3 class="use-case">{{t 'bezarlak.3-box-cim'}}</h3>
+        <p>{{t 'bezarlak.3-box-szoveg'}} blabla</p>
       </div>
     </div>
   </script>
