@@ -13,6 +13,14 @@ $(window).bind("load", function () {
     }
 });
 
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=157334674330086&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
 var userLang = (navigator.language=='hu' || navigator.userLanguage=='hu') ? 'hu' : 'en';
 userLang = 'hu';
 
@@ -92,16 +100,8 @@ App.SzobakView = Ember.View.extend({
 App.LangIndexView = Ember.View.extend({
 
 });
-App.LangArakView = Ember.View.extend({
-    didInsertElement: function() {
-        window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '157334674330086',
-          xfbml      : true,
-          version    : 'v2.0'
-        });
-        };
-
+App.LangArakRoute = Ember.Route.extend({
+    activate: function() {
         (function(d, s, id){
          var js, fjs = d.getElementsByTagName(s)[0];
          if (d.getElementById(id)) {return;}
@@ -109,6 +109,12 @@ App.LangArakView = Ember.View.extend({
          js.src = "//connect.facebook.net/en_US/sdk.js";
          fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
+
+        FB.init({
+          appId      : '157334674330086',
+          xfbml      : true,
+          version    : 'v2.0'
+        });
     }
 });
 App.SzobakVegasView = Ember.View.extend({
