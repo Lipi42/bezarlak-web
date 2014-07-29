@@ -135,7 +135,7 @@
       </div>
       <div class="small-12 medium-4 columns">
         <h3 class="use-case">{{t 'bezarlak.3-box-cim'}}</h3>
-        <p>{{t 'bezarlak.3-box-szoveg'}} blabla</p>
+        <p>{{t 'bezarlak.3-box-szoveg'}}</p>
       </div>
     </div>
   </script>
@@ -143,30 +143,28 @@
   <script type="text/x-handlebars" data-template-name="szobak">
      <div class="row" style="margin-bottom: 3rem;">
       <div class="small-12 columns bg">
-        <h1 class="medium-text-center">Szobáink</h1>
-        <p>
-          A BezárLakban két teljesen különböző kalanddal várunk Titeket, melyek egy-egy egyedileg berendezett, adott téma köré épülő, különböző kihívásokat jelentő szobát takarnak.
-        <p>
-        <p>A szobák megoldásához semelyik esetben <strong>nincs szükség különleges ismeretekre,</strong> csupán figyelemre, jó csapatmunkára és nem utolsó sorban logikára. A fő eltérés a témákban, hangulatban mutatkozik meg, de bátran ajánljuk, hogy mindkét szobát próbáljátok ki érdeklődési körtől függetlenül.</p>
+        <h1 class="medium-text-center">{{t 'szobak.cim'}}</h1>
+        <p>{{t 'szobak.elso-bekezdes'}}</p>
+        <p>{{t 'szobak.masodik-bekezdes'}}</p>
       </div>
     </div>
     <div class="row">
       <div class="small-12 medium-5 columns text-left">
         <ul class="pricing-table">
-          <li class="title" style="background-image: url(/design/vegas.jpg);"><h2>Vegas</h2></li>
-          <li class="bullet-item"><strong>Téma:</strong> kaszinó, póker</li>
-          <li class="bullet-item">2-5 játékos</li>
-          <li class="bullet-item">60 perc</li>
-          <li class="cta-button">{{#link-to 'szobak.vegas' class='button'}}Részletek{{/link-to}}</li>
+          <li class="title" style="background-image: url(/design/vegas.jpg);"><h2>{{t 'szobak.vegas-box-cim'}}</h2></li>
+          <li class="bullet-item">{{t 'szobak.vegas-box-elso-sor'}}</li>
+          <li class="bullet-item">{{t 'szobak.vegas-box-masodik-sor'}}</li>
+          <li class="bullet-item">{{t 'szobak.vegas-box-harmadik-sor'}}</li>
+          <li class="cta-button">{{#link-to 'szobak.vegas' class='button'}}{{t 'szobak.vegas-box-gomb'}}{{/link-to}}</li>
         </ul>
       </div>
       <div class="small-12 medium-5 medium-offset-2 columns text-left">
         <ul class="pricing-table">
-          <li class="title" style="background-image: url(/design/science.jpg);"><h2>Science</h2></li>
-          <li class="bullet-item" style="line-height: 1.2rem;"><strong>Téma:</strong> tudomány</li>
-          <li class="bullet-item">2-4 játékos</li>
-          <li class="bullet-item">60 perc</li>
-          <li class="cta-button">{{#link-to 'szobak.science' class='button'}}Részletek{{/link-to}}</li>
+          <li class="title" style="background-image: url(/design/science.jpg);"><h2>{{t 'szobak.science-box-cim'}}</h2></li>
+          <li class="bullet-item" style="line-height: 1.2rem;">{{t 'szobak.science-box-elso-sor'}}</li>
+          <li class="bullet-item">{{t 'szobak.science-box-masodik-sor'}}</li>
+          <li class="bullet-item">{{t 'szobak.science-box-harmadik-sor'}}</li>
+          <li class="cta-button">{{#link-to 'szobak.science' class='button'}}{{t 'szobak.science-box-gomb'}}{{/link-to}}</li>
         </ul>
       </div>
     </div>
@@ -184,7 +182,7 @@
         </div>
         <a class="close-reveal-modal">&#215;</a>
         <div class="small-12 medium-6 medium-offset-1 columns">
-          <h2>Vegas</h2>
+          <h2>{{t 'felugro.vegas-cim'}}</h2>
         </div>
       </div>
     </div>
@@ -193,14 +191,14 @@
   <script type="text/x-handlebars" data-template-name="szobak/science">
     <div id="scienceModal" class="reveal-modal medium" data-reveal>
       <a class="close-reveal-modal">&#215;</a>
-      <div class="row">
+      <div class="row">.
         <div class="small-12 hide-for-small-only medium-4 columns">
           <img src="/design/science-bg.jpg">
           <img src="/design/science.jpg">
           <img src="/design/science.jpg">
         </div>
         <div class="small-12 medium-6 medium-offset-1 columns">
-          <h2>Science</h2>
+          <h2>{{t 'felugro.science-cim'}}</h2>
         </div>
       </div>
     </div>
@@ -209,16 +207,16 @@
   <script type="text/x-handlebars" data-template-name="lang/arak">
      <div class="row" style="margin-bottom: 3rem;">
       <div class="small-12 columns bg">
-        <h1 class="medium-text-center">Árak</h1>
-        <p>Játékaink </p>
+        <h1 class="medium-text-center">{{t 'arak.cim'}}</h1>
+        <p>{{t 'arak.szoveg'}} </p>
       </div>
     </div>
     <div class="row">
       <div class="small-12 medium-5 columns text-left">
-        <h3 class="medium-text-center">Listaár</h3>
+        <h3 class="medium-text-center">{{t 'arak.listaar-cim'}}</h3>
         <form>
           <div class="row">
-            <label>Melyik terem érdekel?
+            <label>{{t 'arak.listaar-terem'}}
               {{view Ember.Select
                  selection=selectedGame
                  content=sGames
@@ -226,7 +224,7 @@
             </label>
           </div>
           <div class="row">
-            <label>Hányan vagytok?
+            <label>{{t 'arak.listaar-letszam'}}
               {{view Ember.Select
                  selection=selectedPeople
                  content=sPeople
@@ -234,7 +232,7 @@
             </label>
           </div>
           <div class="row">
-            <label>Van legalább kettőtöknek érvényes diákigazolványa?
+            <label>{{t 'arak.listaar-diak'}}
               {{view Ember.Select
                  value=selectedDiak
                  content=sIH
@@ -245,7 +243,7 @@
             </label>
           </div>
           <div class="row">
-            <label>Rendelkeztek voucherrel?
+            <label>{{t 'arak.listaar-voucher'}}
               {{view Ember.Select
                  value=selectedVoucher
                  content=sIH
@@ -257,16 +255,16 @@
           </div>
         </form>
 
-          {{#if capitaPrice}}<h3 class="text-center">Fejenként: {{capitaPrice}} Ft</h3>        <div class="row">
+          {{#if capitaPrice}}<h3 class="text-center">{{t 'arak.listaar-fejenkent'}}{{capitaPrice}} Ft</h3>        <div class="row">
         <div class="row">
-          {{#link-to 'lang.foglalas' class="button small-12 medium-centered columns"}}Foglalás{{/link-to}}
+          {{#link-to 'lang.foglalas' class="button small-12 medium-centered columns"}}{{t 'arak.foglalas'}}{{/link-to}}
           </div>
         </div>{{/if}}
       </div>
 
       <div class="small-12 medium-5 medium-offset-2 columns text-left">
-        <h3 class="medium-text-center">Aktuális akciónk</h3>
-        <p style="margin-bottom: 2rem;">Csatlakozz Facebook oldalunkhoz, hogy ne maradj le egyetlen akciónkról sem!</p>
+        <h3 class="medium-text-center">{{t 'arak.aktualis-cim'}}</h3>
+        <p style="margin-bottom: 2rem;">{{t 'arak.aktualis-fb'}}</p>
         <div style="margin-left: auto; margin-right: auto; text-align: center;">
           <div class="fb-like-box" data-height="350" data-href="https://www.facebook.com/bezarlak" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
         </div>
