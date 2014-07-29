@@ -70,16 +70,15 @@ Ember.I18n.translations = {
 
   'kapcsolat': {
     'kerdes-cim': 'Kérdésed van?',
-    'kerdes-szoveg': 'valami szöveg',
+    'kerdes-szoveg': 'Ha akad bármi, ami még érdekel, az alábbi módokon érhetsz el minket:',
     'kerdes-telefon': 'Telefonon: ',
     'kerdes-email': 'e-mailben: ', 
     'erkezes-cim': 'Hogyan érkeztek?',
-    'erkezes-elso-bekezdes': '',
-    'erkezes-masodik-bekezdes': '',
-    'erkezes-harmadik-bekezdes': '',
-    'erkezes-negyedik-bekezdes': '',
-    'erkezes-ötödik-bekezdes': '',
-    'erkezes-hatodik-bekezdes': '',
-    'erkezes-hetedik-bekezdes': '',
+    'erkezes-elso-bekezdes': 'A BezárLak szobái a lentebb lévő cím alatt található kertes házban találhatóak. Attól függően, hogy hogy szeretnél érkezni, két lehetőséget ajánlunk.',
+    'erkezes-masodik-bekezdes': 'Tömegközelekedéssel:',
+    'erkezes-harmadik-bekezdes': '<strong>Karolina útig</strong> 19, 49 villamos, ',
+    'erkezes-negyedik-bekezdes': 'vagy <strong>Tétényi útig</strong> 7, 87, 87A, 114, 173, 187, 213, 214 buszok.',
+    'erkezes-otodik-bekezdes': 'Autóval:',
+    'erkezes-hatodik-bekezdes': 'A Kovászna utca felől, a parkolás ingyenes, az utcában általában szabad parkolóhely elérhető.'
   }
 };
