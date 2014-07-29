@@ -54,5 +54,32 @@ Ember.I18n.translations = {
     'foglalas': 'Foglalas',
     'aktualis-cim': 'Aktuális akciónk',
     'aktualis-fb': 'Csatlakozz Facebook oldalunkhoz, hogy ne maradj le egyetlen akciónkról sem!'
+  },
+
+  'foglalas': {
+    'cim': 'Foglalás',
+    'online-cim': 'Online foglalás',
+    'online-elso-bekezdes': 'Felületünkön keresztül <strong>legalább két órával</strong> előre foglalhatsz időpontot a két terem valamelyikébe.',
+    'online-masodik-bekezdes': 'Foglalásodról emailben azonnal visszajelzést küldünk, innentől kezdve érvényes és szeretettel várunk a választott időpontodon csapatoddal.',
+    'online-gomb': 'Online foglalok',
+    'telefon-cim': 'Telefonos foglalás',
+    'telefon-elso-bekezdes': 'Amennyiben szívesebben foglalnál telefonon, vagy kérdéseid vannak, hívásodat az alábbi telefonszámok egyikén várjuk:',
+    'telefon-masodik-bekezdes': 'Telefon:',
+    'telefon-harmadik-bekezdes': '+36 30 923 5739<br />+36 20 972 4871'
+  },
+
+  'kapcsolat': {
+    'kerdes-cim': 'Kérdésed van?',
+    'kerdes-szoveg': 'valami szöveg',
+    'kerdes-telefon': 'Telefonon: ',
+    'kerdes-email': 'e-mailben: ', 
+    'erkezes-cim': 'Hogyan érkeztek?',
+    'erkezes-elso-bekezdes': '',
+    'erkezes-masodik-bekezdes': '',
+    'erkezes-harmadik-bekezdes': '',
+    'erkezes-negyedik-bekezdes': '',
+    'erkezes-ötödik-bekezdes': '',
+    'erkezes-hatodik-bekezdes': '',
+    'erkezes-hetedik-bekezdes': '',
   }
 };
