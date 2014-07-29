@@ -63,7 +63,7 @@ Ember.I18n.translations = {
     'online-masodik-bekezdes': 'Foglalásodról emailben azonnal visszajelzést küldünk, innentől kezdve érvényes és szeretettel várunk a választott időpontodon csapatoddal.',
     'online-gomb': 'Online foglalok',
     'telefon-cim': 'Telefonos foglalás',
-    'telefon-elso-bekezdes': 'Amennyiben szívesebben foglalnál telefonon, vagy kérdésed van, hívásodat az alábbi telefonszámok egyikén várjuk:',
+    'telefon-elso-bekezdes': 'Amennyiben szívesebben foglalnál telefonon, vagy kérdésed van, hívásodat az alábbi telefonszámok valamelyikén várjuk:',
     'telefon-masodik-bekezdes': 'Telefon:',
     'telefon-harmadik-bekezdes': '+36 30 923 5739<br />+36 20 972 4871'
   },

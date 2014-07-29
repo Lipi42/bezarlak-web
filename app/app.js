@@ -1,18 +1,5 @@
 $(document).foundation();
 
-$(window).bind("load", function () {
-    var footer = $("footer");
-    var pos = footer.position();
-    var height = $(window).height();
-    height = height - pos.top;
-    height = height - footer.height();
-    if (height > 0) {
-        footer.css({
-            'margin-top': height + 'px'
-        });
-    }
-});
-
 (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -38,6 +25,12 @@ App.Router.map(function() {
         this.route('foglalas', { path: '/foglalas' });
         this.route('kapcsolat', { path: '/kapcsolat' });
     });
+});
+App.ResetScroll = Ember.Mixin.create({
+  activate: function() {
+    this._super();
+    window.scrollTo(0,0);
+  }
 });
 App.Router.reopen({
     location: 'history'
@@ -82,7 +75,7 @@ App.LangController = Ember.ObjectController.extend({
     actions: {
         closeLanguage: function() {
             $("#language").slideUp("slow");
-            $("footer .language").show("slow");
+            /* $("footer .language").show("slow"); */
         },
 
         changeLanguage: function() {
@@ -95,12 +88,16 @@ App.LangController = Ember.ObjectController.extend({
 App.SzobakView = Ember.View.extend({
   didInsertElement: function() {
     this.$().foundation();
+  },
+
+  actions: {
+    showPrices: function() {
+        this.transitionToRoute('lang.arak');
+    }
   }
 });
-App.LangIndexView = Ember.View.extend({
-
-});
-App.LangArakRoute = Ember.Route.extend({
+App.SzobakRoute = Ember.Route.extend(App.ResetScroll);
+App.LangArakRoute = Ember.Route.extend(App.ResetScroll, {
     activate: function() {
         (function(d, s, id){
          var js, fjs = d.getElementsByTagName(s)[0];
@@ -115,6 +112,8 @@ App.LangArakRoute = Ember.Route.extend({
           xfbml      : true,
           version    : 'v2.0'
         });
+
+        this._super();
     }
 });
 App.SzobakVegasView = Ember.View.extend({
@@ -125,7 +124,7 @@ App.SzobakVegasView = Ember.View.extend({
     $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
         self.controller.transitionToRoute('szobak');
     });
-  }
+  },
 });
 App.SzobakScienceView = Ember.View.extend({
   didInsertElement: function() {
@@ -135,6 +134,15 @@ App.SzobakScienceView = Ember.View.extend({
     $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
         self.controller.transitionToRoute('szobak');
     });
+  }
+});
+
+App.SzobakVegasController = App.SzobakScienceController = Ember.Controller.extend({
+  actions: {
+    showPrices: function() {
+        $('.reveal-modal').foundation('reveal', 'close');
+        this.transitionToRoute('lang.arak');
+    }
   }
 });
 
