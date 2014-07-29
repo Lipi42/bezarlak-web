@@ -35,7 +35,7 @@
       <div class="row">
         <ul class="title-area" style="height: 2.875rem;">
           <li class="name small-6 columns">
-            <h1>{{#link-to 'lang.index'}}{{t 'menu.BezárLak'}}{{/link-to}}</a></h1>
+            <h1>{{#link-to 'lang.index'}}BezárLak{{/link-to}}</a></h1>
           </li>
           <li class="toggle-topbar small-6 columns text-right menu-icon"><a class="right-off-canvas-toggle"><span>Menü</span></a></li>
         </ul>
@@ -255,9 +255,10 @@
           </div>
         </form>
 
-        {{#if capitaPrice}}<h3 class="text-center">{{t 'arak.listaar-fejenkent'}}{{capitaPrice}} Ft</h3>
+          {{#if capitaPrice}}<h3 class="text-center">{{t 'arak.listaar-fejenkent'}}{{capitaPrice}} Ft</h3>        <div class="row">
         <div class="row">
           {{#link-to 'lang.foglalas' class="button small-12 medium-centered columns"}}{{t 'arak.foglalas'}}{{/link-to}}
+          </div>
         </div>{{/if}}
       </div>
 
@@ -274,38 +275,8 @@
 
 
   <script type="text/x-handlebars" data-template-name="lang/foglalas">
-    <div class="row">
-      <div class="small-12 columns">
-        <h1 class="medium-text-center" style="margin-bottom: 0;">Foglalás</h1>
-      </div>
-    </div>
-
-    <div class="row">
-
-    <div id="setmore" style="display: none; margin-bottom: 3rem;">
-      <img src="/design/preloader.gif" style="position: absolute; top: 50%; left: 50%; margin-left: -64px; margin-top: -64px; z-index: -1;" class="hidden-for-small-only" />
-      <iframe src="http://bezarlak.setmore.com/" scrolling="no" style="width: 100%; height: 100%; min-height: 38rem;"frameborder="0"></iframe>
-    </div>
-
-      <div class="small-12 medium-6 columns text-left">
-        <h3 class="medium-text-center">Online foglalás</h3>
-        <p>Felületünkön keresztül <strong>legalább két órával</strong> előre foglalhatsz időpontot a két terem valamelyikébe.</p>
-        <p style="margin-bottom: 2rem;">Foglalásodról emailben azonnal visszajelzést küldünk, innentől kezdve érvényes és szeretettel várunk a választott időpontodon csapatoddal.</p>
-        <a {{action 'showSetmore'}} id="showSetmore" class="button small-12 medium-centered columns" style="margin-bottom: 3rem;">Online foglalok</a>
-      </div>
-      <div class="small-12 medium-offset-1 medium-5 columns text-left">
-        <h3 class="medium-text-center">Telefonos foglalás</h3>
-        <p>Amennyiben szívesebben foglalnál telefonon, vagy kérdéseid vannak, hívásodat az alábbi telefonszámok egyikén várjuk:</p>
-        <div class="row" style="padding-left: 0;">
-          <div class="small-4 columns"><p style="font-weight: bold;">Telefon:</p></div>
-          <div class="small-8 columns">
-            <p>+36 30 923 5739<br />
-            +36 20 972 4871</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <img src="/design/preloader.gif" style="position: absolute; top: 50%; left: 50%; margin-left: -64px; margin-top: -64px; z-index: -1;">
+    <iframe src="http://bezarlak.setmore.com/" scrolling="no" style="width: 100%; height: 100%; min-height: 38rem;"frameborder="0"></iframe>
   </script>
 
   <script type="text/x-handlebars" data-template-name="lang/kapcsolat">
