@@ -1,0 +1,21 @@
+/* Circle Style Two Medium and Large */   
+
+@media only screen and (min-width: 0) and (max-width: 40em){ 
+  .step-by-step-style-two {
+    .path-item {
+      padding-left:55px;
+      position: relative;
+      .circlenumber {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        margin-top: 6px;
+        left: 0;
+        h3 {
+          padding-top: 15px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
