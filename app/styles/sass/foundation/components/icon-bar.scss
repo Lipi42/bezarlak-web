@@ -69,6 +69,10 @@ $icon-bar-item-padding: 1rem 0.6rem 1rem !default;
 
 	& a {
 		color: #fff;
+
+		&:hover {
+			color: green;
+		}
 	}
 
 	&.label-right > * {
