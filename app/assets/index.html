@@ -32,14 +32,15 @@
       <a class="close-language" {{action closeLanguage}}>&#215;</a>
     </div>
 
-    <nav class="top-bar visible-for-small-only" data-topbar>
+    <nav class="hide-for-medium-up tab-bar" data-topbar>
       <div class="row">
-        <ul class="title-area" style="height: 2.875rem;">
-          <li class="name small-6 columns">
-            <h1>{{#link-to 'lang.index'}}BezárLak{{/link-to}}</a></h1>
-          </li>
-          <li class="toggle-topbar small-6 columns text-right menu-icon"><a class="right-off-canvas-toggle"><span>Menü</span></a></li>
-        </ul>
+          <section class="left" style="padding-left: 1rem;">
+            <h1 class="title">{{#link-to 'lang.index'}}<img src="/design/logo-mini.png" style="height: 20px;" />{{/link-to}}</h1>
+          </section>
+
+          <section class="right-small">
+            <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+          </section>
       </div>
     </nav>
 
@@ -95,6 +96,7 @@
     </video>
   </div> -->
 
+  <div class="show-for-small-only" style="height: 2rem"></div>
   <div id="content">
     {{outlet}}
   </div>
@@ -113,21 +115,26 @@
   
   <script type="text/x-handlebars" data-template-name="lang/index"> 
 
-    <div class="row" style="padding-bottom: 1.4rem; padding-top: 4rem;">
+    <div class="row" style="padding-bottom: 1.4rem; padding-top: 1rem;">
+      
       <div class="small-12 medium-6 columns">
-        <h3 style="margin-bottom: 1rem;">Csapatos magány.</h3>
-        <p>Évezredek óta foglalkoztatja az embereket, hogy milyen lenne újrakezdeni. Távol másoktól, csupán néhány társsal, megbírkózni egy új környezet kihívásaival.</p>
-        <p>Haladni, felfedezni, megoldani. Sikerélmény.</p>
-        <p>Erről szól a BezárLak.</p>
+
+        <h1 class="medium-text-center hide-for-small-only" style="font-size: 2.8rem; border-bottom: none;">Mi a BezárLak?</h1>
+        <h1 class="medium-text-center show-for-small-only" style="font-size: 2rem; border-bottom: none; margin-top:1.4rem; margin-bottom: 1rem;">Mi a BezárLak?</h1>
+        <p>Mások szabadulós játéknak hívják; ez persze valakinek, aki még sosem próbálta ki, nem mond sokat.</p>
+        <h3 style="margin-bottom: 1rem;">Egy szóval: csapatjáték.</h3>
+        <p>A legtöbb ember kedveli az olyan kihívásokat, amelyek szórakoztatóak, izgalmasak és teljesíthetőek. Másoktól elszigetelten, néhány választott társsal, megbirkózni egy új környezet kihívásaival.</p>
+        <p>Felfedezni, haladni, megoldani. Sikerélményeket gyűjteni, melyekért valóban meg kell küzdeni.</p>
+        <h3 style="margin-bottom: 1rem;">Erről szól a BezárLak.</h3>
         <p>Egy cél lebeg a szemetek előtt: kijutni a szobából, mielőtt lejár a számláló. Itt azonban semmi sem az, aminek látszik. Csak a csapatmunkátokon és a logikátokon múlik, hogy sikerül-e.</p>
-        <p>Pont ettől izgalmas.
+        <p>És pont ettől izgalmas.</p>
       </div>  
       <div class="small-12 medium-6 columns">
-      <div class="hide-for-small-only" style="height: 18rem"></div>
-      <blockquote><p style="font-weight: 400; font-size: 1.3rem;">Valamit nem vettünk észre. Bejutottunk a sötét szobába, de egyelőre semmit sem találtunk.</p>
-      <p style="font-weight: 600; font-size: 1.3rem;">Ketyeg az idő.</p>
-      <p style="font-weight: 400; font-size: 1.3rem;">Van egy kulcsunk, ami nem tudjuk, hogy hova való. Nem jöttünk még rá a táblára és a lábnyomokra. Ezen kívül van egy pohár vizünk, amit valaki itt felejtett.</p>
-      <p style="font-weight: 400; font-size: 1.3rem;">A többiek a táblát próbálják megfejteni, én pedig a sötétben matatok. Nagyon sok lakat van még hátra, és egy csomó szimbólum. Ó, egy tölcsér! Várjunk csak...</p>
+      <div class="hide-for-small-only" style="height: 34rem"></div>
+      <blockquote><p style="font-weight: 400; font-size: 1.2rem;">Valamit nem vettünk észre. Bejutottunk a sötét szobába, de egyelőre semmit sem találtunk.</p>
+      <p style="font-weight: 600; font-size: 1.2rem;">Ketyeg az idő.</p>
+      <p style="font-weight: 400; font-size: 1.2rem;">Van egy kulcsunk, amiről nem tudjuk, hogy hova való. Nem jöttünk még rá a táblára és a lábnyomokra. Ezen kívül van egy pohár vizünk, amit valaki itt felejtett.</p>
+      <p style="font-weight: 400; font-size: 1.2rem;">A többiek a táblát próbálják megfejteni, én pedig a sötétben matatok. Nagyon sok lakat van még hátra, és egy csomó szimbólum. Ó, egy tölcsér! Várjunk csak...</p>
       <cite class="text-right">egy BezárLak játékos naplója</cite></blockquote>
       </div>
     </div>
@@ -188,6 +195,7 @@
         </ul>
       </div>
       <div class="small-12 medium-5 medium-offset-2 columns text-left">
+        <div class="show-for-small-only" style="height: 2rem;"></div>
         <ul class="pricing-table">
           <li class="title" style="background-image: url(/design/science.jpg);"><h2>{{t 'szobak.science-box-cim'}}</h2></li>
           <li class="bullet-item" style="line-height: 1.2rem;">{{t 'szobak.science-box-elso-sor'}}</li>
@@ -216,9 +224,8 @@
           <p>Vegas pályánkon a póker világába kalauzolunk el titeket. Átélhetitek egy valódi kártyaterem hangulatát,
           miközben különbözö ügyességi feladatok és kihívó logikai feladványok állják utatokat és nehezítik meg a szobából
           való kijutásotokat.</p>
-          <p>A feladványok megoldására és az ajtó kinyitására 60 perc áll rendelkezésetekre, melyet 2-5 fős csapatokban teljesíthettek.</p>
-          <p>Ezt a szobánkat elsősorban tapasztaltabb játékosoknak ajánljuk, nem hátrány ha láttatok már hasonló játékot,
-          de természetesen ez nem követelmény.</p>
+          <p>A feladványok megoldására és az ajtó kinyitására <strong>60 perc</strong> áll rendelkezésetekre, melyet <strong>2-5 fős</strong> csapatokban teljesíthettek.</p>
+          <p>Ezt a szobánkat <strong>elsősorban tapasztaltabb játékosoknak</strong> ajánljuk. Nem hátrány, ha láttatok már hasonló játékot, de természetesen ez nem követelmény.</p>
 
           <div class="row"><div class="medium-10 small-12 medium-centered columns"><a class="button small-12" {{action 'showPrices'}}>Mennyivel szállhatok be?</a></div></div>
         </div>
@@ -239,7 +246,7 @@
 
           <p>Bár a név nem mindenki számára &ndash; például a főleg humán tárgyak iránt érdeklődők számára &ndash; vonzó, semmiképp se felejtsük el, hogy tudomány nélkül nem lenne számítógép, Iron Man vagy éppen <strong>látványos UV fények.</strong></p>
           <p>A témája ellenére a szoba nem igényel semmilyen előképzettséget; ezt a kalandot egyaránt élvezheti az is, aki csak itt ismerkedik meg az élő kijutós játékok csodájával, valamit az is, aki a legnagyobb profik közé tartozik.</p>
-          <p>2-4 fős csapatokban várunk titeket, a kijutásra 60 percetek van. Készen álltok?</p>
+          <p><strong>2-4 fős</strong> csapatokban várunk titeket, a kijutásra <strong>60 percetek van.</strong> Készen álltok?</p>
 
 
         <div class="row"><div class="medium-8 small-12 medium-centered columns"><a class="button small-12" {{action 'showPrices'}}>Mennyibe kerül?</a></div></div>
@@ -306,8 +313,9 @@
 
 
   <script type="text/x-handlebars" data-template-name="lang/foglalas">
-    <div id="setmore" style="display: none; margin-bottom: 0rem;">  
-      <iframe src="http://bezarlak.setmore.com/" scrolling="no" style="width: 100%; height: 100%; min-height: 40rem;"frameborder="0"></iframe>
+    <div id="setmore" style="display: none; margin-bottom: 0rem;">
+      <div class="show-for-small-only" style="height: 1.8rem"></div>  
+      <iframe src="http://bezarlak.setmore.com/" scrolling="no" style="width: 100%; min-height: 40rem;"frameborder="0"></iframe>
     </div>
 
     <div class="row">
