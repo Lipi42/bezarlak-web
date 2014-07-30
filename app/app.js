@@ -1,28 +1,26 @@
 $(document).foundation();
 
-$(window).bind("load", function () {
-    var footer = $("footer");
-    var pos = footer.position();
-    var height = $(window).height();
-    height = height - pos.top;
-    height = height - footer.height();
-    if (height > 0) {
-        footer.css({
-            'margin-top': height + 'px'
-        });
-    }
-});
-
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=157334674330086&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
 var userLang = (navigator.language=='hu' || navigator.userLanguage=='hu') ? 'hu' : 'en';
 userLang = 'hu';
+
+(function(d){
+var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+if (d.getElementById(id)) {return;}
+js = d.createElement('script'); js.id = id; js.async = true;
+js.src = "https://connect.facebook.net/en_US/all.js";
+ref.parentNode.insertBefore(js, ref);
+}(document));
+
+window.fbAsyncInit = function() {
+    FB.init({
+        appId      : '157334674330086', // App ID
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+    });
+    FB.XFBML.parse();
+    console.log("ok");
+}
 
 var App = Ember.Application.create();
 
@@ -38,6 +36,12 @@ App.Router.map(function() {
         this.route('foglalas', { path: '/foglalas' });
         this.route('kapcsolat', { path: '/kapcsolat' });
     });
+});
+App.ResetScroll = Ember.Mixin.create({
+  activate: function() {
+    this._super();
+    window.scrollTo(0,0);
+  }
 });
 App.Router.reopen({
     location: 'history'
@@ -82,7 +86,7 @@ App.LangController = Ember.ObjectController.extend({
     actions: {
         closeLanguage: function() {
             $("#language").slideUp("slow");
-            $("footer .language").show("slow");
+            /* $("footer .language").show("slow"); */
         },
 
         changeLanguage: function() {
@@ -95,27 +99,22 @@ App.LangController = Ember.ObjectController.extend({
 App.SzobakView = Ember.View.extend({
   didInsertElement: function() {
     this.$().foundation();
+  },
+
+  actions: {
+    showPrices: function() {
+        this.transitionToRoute('lang.arak');
+    }
   }
 });
-App.LangIndexView = Ember.View.extend({
-
-});
-App.LangArakRoute = Ember.Route.extend({
-    activate: function() {
-        (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-        FB.init({
-          appId      : '157334674330086',
-          xfbml      : true,
-          version    : 'v2.0'
-        });
-    }
+App.SzobakRoute = Ember.Route.extend(App.ResetScroll);
+App.LangArakRoute = Ember.Route.extend(App.ResetScroll);
+App.LangArakView = Ember.View.extend({
+  didInsertElement: function() {
+      if (typeof  FB !== 'undefined') {
+        FB.XFBML.parse();
+      }
+  }
 });
 App.SzobakVegasView = Ember.View.extend({
   didInsertElement: function() {
@@ -125,7 +124,7 @@ App.SzobakVegasView = Ember.View.extend({
     $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
         self.controller.transitionToRoute('szobak');
     });
-  }
+  },
 });
 App.SzobakScienceView = Ember.View.extend({
   didInsertElement: function() {
@@ -135,6 +134,15 @@ App.SzobakScienceView = Ember.View.extend({
     $(document).on('close.fndtn.reveal', '[data-reveal]', function () {
         self.controller.transitionToRoute('szobak');
     });
+  }
+});
+
+App.SzobakVegasController = App.SzobakScienceController = Ember.Controller.extend({
+  actions: {
+    showPrices: function() {
+        $('.reveal-modal').foundation('reveal', 'close');
+        this.transitionToRoute('lang.arak');
+    }
   }
 });
 
@@ -157,12 +165,10 @@ App.LangArakController = Ember.Controller.extend({
     totalPrice: function() {
         var totalPrice = 0;
 
-        if(this.get('selectedVoucher')==false) {
-            if(this.get('selectedGame')==='Vegas') totalPrice = 9890;
-            if(this.get('selectedGame')==='Science') totalPrice = 8490;
+        if(this.get('selectedGame')==='Vegas') totalPrice = 9890;
+        if(this.get('selectedGame')==='Science') totalPrice = 8490;
 
-            if(this.get('selectedDiak')==true) totalPrice = Math.floor(totalPrice * 0.8 / 100, 2)*100-10;
-        } else totalPrice = 6690;
+        if(this.get('selectedDiak')==true) totalPrice = Math.floor(totalPrice * 0.8 / 100, 2)*100-10;
 
         if(this.get('selectedPeople') == '4+1' || this.get('selectedPeople') == '5+1') {
             totalPrice += 1400;

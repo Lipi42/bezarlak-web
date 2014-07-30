@@ -27,7 +27,7 @@ $tabbar-header-line-height: $tabbar-height !default;
 $tabbar-header-margin: 0 !default;
 
 // Off Canvas Menu Variables
-$off-canvas-width: rem-calc(250) !default;
+$off-canvas-width: rem-calc(160) !default;
 $off-canvas-bg: #333 !default;
 
 // Off Canvas Menu List Variables
@@ -39,8 +39,8 @@ $off-canvas-label-font-weight: $font-weight-bold !default;
 $off-canvas-label-bg: #444 !default;
 $off-canvas-label-border-top: 1px solid scale-color($off-canvas-label-bg, $lightness: 14%) !default;
 $off-canvas-label-border-bottom: none !default;
-$off-canvas-label-margin:0 !default;
-$off-canvas-link-padding: rem-calc(10, 15) !default;
+$off-canvas-label-margin:0 0.2rem !default;
+$off-canvas-link-padding: rem-calc(10, 15) 0.7rem !default;
 $off-canvas-link-color: rgba(#FFF, 0.7) !default;
 $off-canvas-link-border-bottom: 1px solid scale-color($off-canvas-bg, $lightness: -25%) !default;
 
@@ -234,6 +234,9 @@ $menu-slide: "transform 500ms ease" !default;
       &:hover { background: scale-color($tabbar-bg, $lightness: -30%); }
       transition: background 300ms ease;
     }
+    span {
+      padding-left: 0.5rem;
+    }
   }
 
 }
@@ -310,7 +313,9 @@ $menu-slide: "transform 500ms ease" !default;
     .left-off-canvas-menu { @include off-canvas-menu($position: left); }
     .right-off-canvas-menu { @include off-canvas-menu($position: right); }
 
-    ul.off-canvas-list { @include off-canvas-list; }
+    ul.off-canvas-list { @include off-canvas-list;
+
+     }
 
 
     // ANIMATION CLASSES
