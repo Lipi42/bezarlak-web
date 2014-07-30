@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
 <head>
   <base href="/">
   <meta charset="utf-8"/>
@@ -16,12 +16,13 @@
 </head>
 
 <body>
-
   <script type="text/x-handlebars">
     {{outlet}}
   </script>
 
   <script type="text/x-handlebars" data-template-name="lang">
+  <div id="fb-root"></div>
+
   <div class="off-canvas-wrap" data-offcanvas>
 
   <div class="inner-wrap">
@@ -112,19 +113,30 @@
   
   <script type="text/x-handlebars" data-template-name="lang/index"> 
 
-    <div class="row" style="padding-bottom: 1.4rem;">
-      <h1 class="small-12 columns medium-text-center" style="margin-bottom: 6rem;">{{t 'bezarlak.mi-a-bezarlak'}}</h1>
-      <p class="text-center hidden-for-small-only" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{t 'bezarlak.elso-sor'}}</p>
-      <p class="text-center hidden-for-small-only" style="font-size: 1.6rem;">{{t 'bezarlak.masodik-sor'}}</p>
-      <p class="visible-for-small-only" style="font-size: 1.2rem; margin-bottom: 0.5rem;">{{t 'bezarlak.elso-sor'}}</p>
-      <p class="visible-for-small-only" style="font-size: 1.2rem;">{{t 'bezarlak.masodik-sor'}}</p>
+    <div class="row" style="padding-bottom: 1.4rem; padding-top: 4rem;">
+      <div class="small-12 medium-6 columns">
+        <h3 style="margin-bottom: 1rem;">Csapatos magány.</h3>
+        <p>Évezredek óta foglalkoztatja az embereket, hogy milyen lenne újrakezdeni. Távol másoktól, csupán néhány társsal, megbírkózni egy új környezet kihívásaival.</p>
+        <p>Haladni, felfedezni, megoldani. Sikerélmény.</p>
+        <p>Erről szól a BezárLak.</p>
+        <p>Egy cél lebeg a szemetek előtt: kijutni a szobából, mielőtt lejár a számláló. Itt azonban semmi sem az, aminek látszik. Csak a csapatmunkátokon és a logikátokon múlik, hogy sikerül-e.</p>
+        <p>Pont ettől izgalmas.
+      </div>  
+      <div class="small-12 medium-6 columns">
+      <div class="hide-for-small-only" style="height: 18rem"></div>
+      <blockquote><p style="font-weight: 400; font-size: 1.3rem;">Valamit nem vettünk észre. Bejutottunk a sötét szobába, de egyelőre semmit sem találtunk.</p>
+      <p style="font-weight: 600; font-size: 1.3rem;">Ketyeg az idő.</p>
+      <p style="font-weight: 400; font-size: 1.3rem;">Van egy kulcsunk, ami nem tudjuk, hogy hova való. Nem jöttünk még rá a táblára és a lábnyomokra. Ezen kívül van egy pohár vizünk, amit valaki itt felejtett.</p>
+      <p style="font-weight: 400; font-size: 1.3rem;">A többiek a táblát próbálják megfejteni, én pedig a sötétben matatok. Nagyon sok lakat van még hátra, és egy csomó szimbólum. Ó, egy tölcsér! Várjunk csak...</p>
+      <cite class="text-right">egy BezárLak játékos naplója</cite></blockquote>
+      </div>
     </div>
 
-    <div class="row">
-      <h3 class="text-center">Mindössze három dolgot kell<br />tenned, hogy átélhesd:</h3>
+    <div class="row" style="margin-bottom: 0;">
+      <h3 class="text-center" style="margin-bottom: 1rem;">Mindössze három dolgot kell tennetek, hogy Ti is átélhessétek:</h3>
     </div>
 
-  <div class="row step-by-step-style-two">
+  <div class="row step-by-step-style-two" style="margin-top: 0;">
     <div  class="small-12 medium-4 columns">
       <div class="path-item">
         <div class="circlenumber">
@@ -146,7 +158,7 @@
         <div class="circlenumber">
           <h3>3</h3>
         </div>
-        <p><strong>Foglaljatok időpontot</strong> online vagy akár telefonon. Ha felkészültek vagytok, akár a foglalás napján is eljöhettek.</p>
+        <p><strong>Foglaljatok időpontot</strong> online vagy telefonon. Ha felkészültek vagytok, akár a foglalás napján is eljöhettek.</p>
       </div>
     </div>
   </div>
@@ -199,11 +211,11 @@
         </div>
         <a class="close-reveal-modal">&#215;</a>
         <div class="small-12 medium-7 medium-offset-1 columns">
-          <h2 style="margin-bottom: 1.5rem;">{{t 'felugro.vegas-cim'}}</h2>
+          <h2 style="margin-bottom: 1.2rem;">{{t 'felugro.vegas-cim'}}</h2>
 
-          <p>Vegas pályánkon a póker világába kalauzolunk el titeket. Átélhetitek egy valódi kaszinó hangulatát,
-          miközben különbözö ügyességi feladatok és kihívó logikai feladványok állják utatokat és nehezetik meg a szobából
-          való kijutásotok.</p>
+          <p>Vegas pályánkon a póker világába kalauzolunk el titeket. Átélhetitek egy valódi kártyaterem hangulatát,
+          miközben különbözö ügyességi feladatok és kihívó logikai feladványok állják utatokat és nehezítik meg a szobából
+          való kijutásotokat.</p>
           <p>A feladványok megoldására és az ajtó kinyitására 60 perc áll rendelkezésetekre, melyet 2-5 fős csapatokban teljesíthettek.</p>
           <p>Ezt a szobánkat elsősorban tapasztaltabb játékosoknak ajánljuk, nem hátrány ha láttatok már hasonló játékot,
           de természetesen ez nem követelmény.</p>
@@ -223,7 +235,7 @@
           <img src="/design/science-2.jpg">
         </div>
         <div class="small-12 medium-7 columns">
-          <h2 style="margin-bottom: 1.5rem;">{{t 'felugro.science-cim'}}</h2>
+          <h2 style="margin-bottom: 1.2rem;">{{t 'felugro.science-cim'}}</h2>
 
           <p>Bár a név nem mindenki számára &ndash; például a főleg humán tárgyak iránt érdeklődők számára &ndash; vonzó, semmiképp se felejtsük el, hogy tudomány nélkül nem lenne számítógép, Iron Man vagy éppen <strong>látványos UV fények.</strong></p>
           <p>A témája ellenére a szoba nem igényel semmilyen előképzettséget; ezt a kalandot egyaránt élvezheti az is, aki csak itt ismerkedik meg az élő kijutós játékok csodájával, valamit az is, aki a legnagyobb profik közé tartozik.</p>
@@ -240,7 +252,9 @@
     <div class="row">
       <div class="small-12 medium-5 medium-offset-1 columns text-left">
         <h1 class="medium-text-center">{{t 'arak.listaar-cim'}}</h1>
-        <form>
+        <p>Kalkulátorunkkal kiszámolhatod, mennyibe kerül az általatok választott játék fejenként.</p>
+        <p>Amennyiben ajándékba szeretnéd adni, vagy céges csapatépítés érdekel, kérlek telefonon érdeklődj!</p>
+        <form style="margin-top: 2.4rem;">
           <div class="row">
             <label>{{t 'arak.listaar-terem'}}
               {{view Ember.Select
@@ -268,17 +282,8 @@
                 }}
             </label>
           </div>
-          <div class="row">
-            <label>{{t 'arak.listaar-voucher'}}
-              {{view Ember.Select
-                 value=selectedVoucher
-                 content=sIH
-                 optionLabelPath="content.igennem"
-                 optionValuePath="content.bool"
-                 disabled=extrasDisabled
-                }}
-            </label>
-          </div>
+          <!--
+          -->
         </form>
 
           {{#if capitaPrice}}<h3 class="text-center">{{t 'arak.listaar-fejenkent'}}{{capitaPrice}} Ft</h3>        <div class="row">
@@ -292,8 +297,7 @@
         <h1 class="medium-text-center">{{t 'arak.aktualis-cim'}}</h1>
         <p style="margin-bottom: 2rem;">{{t 'arak.aktualis-fb'}}</p>
         <div style="margin-left: auto; margin-right: auto; text-align: center;">
-          <div id="fb-root"></div>
-          <div class="fb-like-box" data-height="350" data-href="https://www.facebook.com/bezarlak" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+          <fb:like-box href="https://www.facebook.com/bezarlak" height="360px" colorscheme="light" show_faces="true" header="false" stream="false" id="likebox" show_border="true"></fb:like-box>
         </div>
       </div>
     </div>
@@ -316,11 +320,9 @@
       <div class="small-12 medium-6 columns text-left">
         <h1 class="medium-text-center">{{t 'foglalas.telefon-cim'}}</h1>
         <p style="margin-bottom: 2rem;">{{t 'foglalas.telefon-elso-bekezdes'}}</p>
-        <div class="row" style="padding-left: 1rem;">
-          <div class="small-4 columns"><p style="font-weight: bold;">{{t 'foglalas.telefon-masodik-bekezdes'}}</p></div>
-          <div class="small-8 columns">
-            <p>{{t 'foglalas.telefon-harmadik-bekezdes'}}</p>
-          </div>
+        <div class="row text-center" style="padding-left: 1rem;">
+          <p style="font-weight: bold; margin-bottom: 0.4rem;">{{t 'foglalas.telefon-masodik-bekezdes'}}</p>
+            <p style="margin-bottom: 1.6rem;">{{t 'foglalas.telefon-harmadik-bekezdes'}}</p>
         </div>
       </div>
     </div>
