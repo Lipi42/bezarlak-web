@@ -18,9 +18,9 @@ $icon-bar-font-color: #333 !default;
 $icon-bar-font-size: 1.04rem !default;
 $icon-bar-hover-color: #333 !default;
 $icon-bar-icon-color: #fff !default;
-$icon-bar-icon-size: 2rem !default;
-$icon-bar-image-width: 50px !default;
-$icon-bar-image-height: 60px !default;
+$icon-bar-icon-size: 2.04rem !default;
+$icon-bar-image-width: 45px !default;
+$icon-bar-image-height: 55px !default;
 $icon-bar-active-color: #000 !default;
 $icon-bar-item-padding: 1rem 0.6rem 1rem !default;
 
@@ -69,6 +69,10 @@ $icon-bar-item-padding: 1rem 0.6rem 1rem !default;
 
 	& a {
 		color: #fff;
+
+		&:hover {
+			color: orange;
+		}
 	}
 
 	&.label-right > * {

@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  background-color: #999;
   /* background-image: url(../design/background.jpg);
   background-size: contain;
   background-position: center top;
@@ -100,7 +101,7 @@ h3.use-case {
 }
 
 #content h1 {
-  margin: 3.5rem auto 2rem auto;
+  margin: 3rem auto 3rem auto;
   padding-left: 0;
   color: #000;
   font-weight: bold;
