@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
 <head>
+  <base href="/">
   <meta charset="utf-8"/>
+  <meta name="fragment" content="!">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BezárLak Szabadulós Játék Budapesten</title>
 
   <link href="/stylesheets/app.css" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'><link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/design/favicon.ico">
 
   <script src="/javascripts/vendor.js"></script>
   <script src="/javascripts/app.js"></script>
@@ -15,29 +18,31 @@
 </head>
 
 <body>
-
   <script type="text/x-handlebars">
     {{outlet}}
   </script>
 
   <script type="text/x-handlebars" data-template-name="lang">
+  <div id="fb-root"></div>
+
   <div class="off-canvas-wrap" data-offcanvas>
 
   <div class="inner-wrap">
 
-    <div id="language">
+    <div id="language" style="display: none;">
       <a class="switch-language" {{action changeLanguage}}>{{t menu.nyelv}}</a>
       <a class="close-language" {{action closeLanguage}}>&#215;</a>
     </div>
 
-    <nav class="top-bar visible-for-small-only" data-topbar>
+    <nav class="hide-for-medium-up tab-bar" data-topbar>
       <div class="row">
-        <ul class="title-area" style="height: 2.875rem;">
-          <li class="name small-6 columns">
-            <h1>{{#link-to 'lang.index'}}BezárLak{{/link-to}}</a></h1>
-          </li>
-          <li class="toggle-topbar small-6 columns text-right menu-icon"><a class="right-off-canvas-toggle"><span>Menü</span></a></li>
-        </ul>
+          <section class="left" style="padding-left: 1rem;">
+            <h1 class="title">{{#link-to 'lang.index'}}<img src="/design/logo-mini.png" style="height: 20px;" />{{/link-to}}</h1>
+          </section>
+
+          <section class="right-small">
+            <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+          </section>
       </div>
     </nav>
 
@@ -86,13 +91,6 @@
     </div>
   </div>
 
-  <div id="video" class="hide-for-small-only">
-    <video autoplay loop poster="polina.jpg" id="bgvid">
-      <source src="video/polina.webm" type="video/webm">
-      <source src="video/polina.mp4" type="video/mp4">
-    </video>
-  </div>
-
   <div id="content">
     {{outlet}}
   </div>
@@ -111,61 +109,93 @@
   
   <script type="text/x-handlebars" data-template-name="lang/index"> 
 
-    <div class="row" style="padding-bottom: 1.4rem;">
-      <h1 class="small-12 columns medium-text-center">Mi a BezárLak?</h1>
-      <p class="text-center hidden-for-small-only" style="font-size: 1.6rem; margin-bottom: 0.5rem;">60 perc rejtvényfejtés, csapatmunka, játékos feladatmegoldás.</p>
-      <p class="text-center hidden-for-small-only" style="font-size: 1.6rem;">Egy cél van: kijutni, mielőtt lejár az idő.</p>
-      <p class="visible-for-small-only" style="font-size: 1.2rem; margin-bottom: 0.5rem;">60 perc rejtvényfejtés, csapatmunka, játékos feladatmegoldás.</p>
-      <p class="visible-for-small-only" style="font-size: 1.2rem;">Egy cél van: kijutni, mielőtt lejár az idő.</p>
-    </div>
-    <div class="row">
-      <div class="small-12 columns small-centered text-center" style="margin-bottom: 1rem;">
-        {{#link-to "szobak" class="button"}}Nézd meg szobáinkat!{{/link-to}}
+    <div class="row" style="padding-bottom: 1.4rem; padding-top: 1rem;">
+      
+      <div class="small-12 medium-6 columns">
+
+        <h1 class="medium-text-center hide-for-small-only" style="font-size: 2.8rem; border-bottom: none;">Mi a BezárLak?</h1>
+        <h1 class="medium-text-center show-for-small-only" style="font-size: 2rem; border-bottom: none; margin-top:1.4rem; margin-bottom: 1rem;">Mi a BezárLak?</h1>
+        <p>Mások szabadulós játéknak hívják; ez persze valakinek, aki még sosem próbálta ki, nem mond sokat.</p>
+        <h3 style="margin-bottom: 1rem; margin-top: 1rem;">Egy szóval: csapatjáték.</h3>
+        <p>A legtöbb ember kedveli az olyan kihívásokat, amelyek szórakoztatóak, izgalmasak és teljesíthetőek. Másoktól elszigetelten, néhány választott társsal, megbirkózni egy új környezet kihívásaival.</p>
+        <p>Felfedezni, haladni, megoldani. Sikerélményeket gyűjteni, melyekért valóban meg kell küzdeni.</p>
+        <h3 style="margin-bottom: 1rem; margin-top: 1rem;">Erről szól a BezárLak.</h3>
+        <p>Egy cél lebeg a szemetek előtt: kijutni a szobából, mielőtt lejár a számláló. Itt azonban semmi sem az, aminek látszik. Csak a csapatmunkátokon és a logikátokon múlik, hogy sikerül-e.</p>
+        <p>És pont ettől izgalmas.</p>
+      </div>  
+      <div class="small-12 medium-6 columns">
+      <div class="hide-for-small-only" style="height: 34rem; text-align: center;"><img style="margin-top: 10.5rem; border: 1px solid #000;" src="/design/lakat.jpg" /></div>
+      <blockquote><p style="font-weight: 400; font-size: 1.2rem;">Valamit nem vettünk észre. Bejutottunk a sötét szobába, de egyelőre semmit sem találtunk.</p>
+      <p style="font-weight: 600; font-size: 1.2rem;">Ketyeg az idő.</p>
+      <p style="font-weight: 400; font-size: 1.2rem;">Van egy kulcsunk, amiről nem tudjuk, hogy hova való. Nem jöttünk még rá a táblára és a lábnyomokra. Ezen kívül van egy pohár vizünk, amit valaki itt felejthetett.</p>
+      <p style="font-weight: 400; font-size: 1.2rem;">A többiek a táblát próbálják megfejteni, én pedig a sötétben matatok. Nagyon sok lakat van még hátra, és egy csomó szimbólum. Ó, egy tölcsér! Várjunk csak...</p>
+      <cite class="text-right">egy BezárLak játékos naplója</cite></blockquote>
       </div>
     </div>
-    <div class="row text-center">
-      <div class="small-12 medium-4 columns">
-        <h3 class="use-case">Mi a feladat?</h3>
-        <p>Lorem ipsum</p>
-      </div>
-      <div class="small-12 medium-4 columns">
-        <h3 class="use-case">Kinek szól?</h3>    
-        <p>Lorem ipsum</p>  
-      </div>
-      <div class="small-12 medium-4 columns">
-        <h3 class="use-case">Hogy vehetek részt?</h3>
-        <p>Lorem ipsum</p>
+
+    <div class="row" style="margin-bottom: 0;">
+      <h3 class="text-center" style="margin-bottom: 1rem;">Mindössze három dolgot kell tennetek, hogy Ti is átélhessétek:</h3>
+    </div>
+
+  <div class="row step-by-step-style-two" style="margin-top: 0;">
+    <div  class="small-12 medium-4 columns">
+      <div class="path-item">
+        <div class="circlenumber">
+          <h3>1</h3>
+        </div>
+        <p><strong>Alapítsatok csapatot</strong> legalább ketten, legfeljebb öten. Pároddal, barátaiddal, családoddal, ellenségeddel: bárkivel jöhetsz, aki egy izgalmas kalandra vágyik.</p>
       </div>
     </div>
+    <div  class="small-12 medium-4 columns">
+      <div class="path-item">
+        <div class="circlenumber">
+          <h3>2</h3>
+        </div>
+        <p><strong>Válasszatok szobát!</strong> Két szobánk egy-egy, témájában és nehézségében eltérő kalandot rejt. </p>
+      </div>
+    </div>
+    <div  class="small-12 medium-4 columns">
+      <div class="path-item">
+        <div class="circlenumber">
+          <h3>3</h3>
+        </div>
+        <p><strong>Foglaljatok időpontot</strong> online vagy telefonon. Ha felkészültek vagytok, akár a foglalás napján is eljöhettek.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 medium-4 small-centered columns">{{#link-to "szobak" class="button small-12"}}Megnézem a szobákat!{{/link-to}}</div>
+  </div>
+
   </script>
 
   <script type="text/x-handlebars" data-template-name="szobak">
      <div class="row" style="margin-bottom: 3rem;">
       <div class="small-12 columns bg">
-        <h1 class="medium-text-center">Szobáink</h1>
-        <p>
-          A BezárLakban két teljesen különböző kalanddal várunk Titeket, melyek egy-egy egyedileg berendezett, adott téma köré épülő, különböző kihívásokat jelentő szobát takarnak.
-        <p>
-        <p>A szobák megoldásához semelyik esetben <strong>nincs szükség különleges ismeretekre,</strong> csupán figyelemre, jó csapatmunkára és nem utolsó sorban logikára. A fő eltérés a témákban, hangulatban mutatkozik meg, de bátran ajánljuk, hogy mindkét szobát próbáljátok ki érdeklődési körtől függetlenül.</p>
+        <h1 class="medium-text-center">{{t 'szobak.cim'}}</h1>
+        <p>{{t 'szobak.elso-bekezdes'}}</p>
+        <p>{{t 'szobak.masodik-bekezdes'}}</p>
       </div>
     </div>
     <div class="row">
       <div class="small-12 medium-5 columns text-left">
         <ul class="pricing-table">
-          <li class="title" style="background-image: url(/design/vegas.jpg);"><h2>Vegas</h2></li>
-          <li class="bullet-item"><strong>Téma:</strong> kaszinó, póker</li>
-          <li class="bullet-item">2-5 játékos</li>
-          <li class="bullet-item">60 perc</li>
-          <li class="cta-button">{{#link-to 'szobak.vegas' class='button'}}Részletek{{/link-to}}</li>
+          <li class="title" style="background-image: url(/design/vegas.jpg);"><h2>{{t 'szobak.vegas-box-cim'}}</h2></li>
+          <li class="bullet-item">{{t 'szobak.vegas-box-elso-sor'}}</li>
+          <li class="bullet-item">{{t 'szobak.vegas-box-masodik-sor'}}</li>
+          <li class="bullet-item">{{t 'szobak.vegas-box-harmadik-sor'}}</li>
+          <li class="cta-button">{{#link-to 'szobak.vegas' class='button'}}{{t 'szobak.vegas-box-gomb'}}{{/link-to}}</li>
         </ul>
       </div>
       <div class="small-12 medium-5 medium-offset-2 columns text-left">
+        <div class="show-for-small-only" style="height: 2rem;"></div>
         <ul class="pricing-table">
-          <li class="title" style="background-image: url(/design/science.jpg);"><h2>Science</h2></li>
-          <li class="bullet-item" style="line-height: 1.2rem;"><strong>Téma:</strong> tudomány</li>
-          <li class="bullet-item">2-4 játékos</li>
-          <li class="bullet-item">60 perc</li>
-          <li class="cta-button">{{#link-to 'szobak.science' class='button'}}Részletek{{/link-to}}</li>
+          <li class="title" style="background-image: url(/design/science.jpg);"><h2>{{t 'szobak.science-box-cim'}}</h2></li>
+          <li class="bullet-item" style="line-height: 1.2rem;">{{t 'szobak.science-box-elso-sor'}}</li>
+          <li class="bullet-item">{{t 'szobak.science-box-masodik-sor'}}</li>
+          <li class="bullet-item">{{t 'szobak.science-box-harmadik-sor'}}</li>
+          <li class="cta-button">{{#link-to 'szobak.science' class='button'}}{{t 'szobak.science-box-gomb'}}{{/link-to}}</li>
         </ul>
       </div>
     </div>
@@ -182,8 +212,16 @@
           <img src="/design/vegas-2.jpg">
         </div>
         <a class="close-reveal-modal">&#215;</a>
-        <div class="small-12 medium-6 medium-offset-1 columns">
-          <h2>Vegas</h2>
+        <div class="small-12 medium-7 medium-offset-1 columns">
+          <h2 style="margin-bottom: 1.2rem;">{{t 'felugro.vegas-cim'}}</h2>
+
+          <p>Vegas pályánkon a póker világába kalauzolunk el titeket. Átélhetitek egy valódi kártyaterem hangulatát,
+          miközben különbözö ügyességi feladatok és kihívó logikai feladványok állják utatokat és nehezítik meg a szobából
+          való kijutásotokat.</p>
+          <p>A feladványok megoldására és az ajtó kinyitására <strong>60 perc</strong> áll rendelkezésetekre, melyet <strong>2-5 fős</strong> csapatokban teljesíthettek.</p>
+          <p>Ezt a szobánkat <strong>elsősorban tapasztaltabb játékosoknak</strong> ajánljuk. Nem hátrány, ha láttatok már hasonló játékot, de természetesen ez nem követelmény.</p>
+
+          <div class="row"><div class="medium-10 small-12 medium-centered columns"><a class="button small-12" {{action 'showPrices'}}>Mennyivel szállhatok be?</a></div></div>
         </div>
       </div>
     </div>
@@ -193,31 +231,33 @@
     <div id="scienceModal" class="reveal-modal medium" data-reveal>
       <a class="close-reveal-modal">&#215;</a>
       <div class="row">
-        <div class="small-12 hide-for-small-only medium-4 columns">
+        <div class="small-12 hide-for-small-only medium-4 columns" style="margin-top: 2rem;">
           <img src="/design/science-bg.jpg">
-          <img src="/design/science.jpg">
-          <img src="/design/science.jpg">
+          <img src="/design/science-2.jpg">
         </div>
-        <div class="small-12 medium-6 medium-offset-1 columns">
-          <h2>Science</h2>
+        <div class="small-12 medium-7 columns">
+          <h2 style="margin-bottom: 1.2rem;">{{t 'felugro.science-cim'}}</h2>
+
+          <p>Bár a név nem mindenki számára &ndash; például a főleg humán tárgyak iránt érdeklődők számára &ndash; vonzó, semmiképp se felejtsük el, hogy tudomány nélkül nem lenne számítógép, Iron Man vagy éppen <strong>látványos UV fények.</strong></p>
+          <p>A témája ellenére a szoba nem igényel semmilyen előképzettséget; ezt a kalandot egyaránt élvezheti az is, aki csak itt ismerkedik meg az élő kijutós játékok csodájával, valamit az is, aki a legnagyobb profik közé tartozik.</p>
+          <p><strong>2-4 fős</strong> csapatokban várunk titeket, a kijutásra <strong>60 percetek van.</strong> Készen álltok?</p>
+
+
+        <div class="row"><div class="medium-8 small-12 medium-centered columns"><a class="button small-12" {{action 'showPrices'}}>Mennyibe kerül?</a></div></div>
         </div>
       </div>
     </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="lang/arak">
-     <div class="row" style="margin-bottom: 3rem;">
-      <div class="small-12 columns bg">
-        <h1 class="medium-text-center">Árak</h1>
-        <p>Játékaink </p>
-      </div>
-    </div>
     <div class="row">
-      <div class="small-12 medium-5 columns text-left">
-        <h3 class="medium-text-center">Listaár</h3>
-        <form>
+      <div class="small-12 medium-5 medium-offset-1 columns text-left">
+        <h1 class="medium-text-center">{{t 'arak.listaar-cim'}}</h1>
+        <p>Kalkulátorunkkal kiszámolhatod, mennyibe kerül az általatok választott játék fejenként.</p>
+        <p>Amennyiben ajándékba szeretnéd adni, vagy céges csapatépítés érdekel, kérlek telefonon érdeklődj!</p>
+        <form style="margin-top: 2.4rem;">
           <div class="row">
-            <label>Melyik terem érdekel?
+            <label>{{t 'arak.listaar-terem'}}
               {{view Ember.Select
                  selection=selectedGame
                  content=sGames
@@ -225,7 +265,7 @@
             </label>
           </div>
           <div class="row">
-            <label>Hányan vagytok?
+            <label>{{t 'arak.listaar-letszam'}}
               {{view Ember.Select
                  selection=selectedPeople
                  content=sPeople
@@ -233,7 +273,7 @@
             </label>
           </div>
           <div class="row">
-            <label>Van legalább kettőtöknek érvényes diákigazolványa?
+            <label>{{t 'arak.listaar-diak'}}
               {{view Ember.Select
                  value=selectedDiak
                  content=sIH
@@ -243,31 +283,22 @@
                 }}
             </label>
           </div>
-          <div class="row">
-            <label>Rendelkeztek voucherrel?
-              {{view Ember.Select
-                 value=selectedVoucher
-                 content=sIH
-                 optionLabelPath="content.igennem"
-                 optionValuePath="content.bool"
-                 disabled=extrasDisabled
-                }}
-            </label>
-          </div>
+          <!--
+          -->
         </form>
 
-          {{#if capitaPrice}}<h3 class="text-center">Fejenként: {{capitaPrice}} Ft</h3>        <div class="row">
+          {{#if capitaPrice}}<h3 class="text-center">{{t 'arak.listaar-fejenkent'}}{{capitaPrice}} Ft</h3>        <div class="row">
         <div class="row">
-          {{#link-to 'lang.foglalas' class="button small-12 medium-centered columns"}}Foglalás{{/link-to}}
+          {{#link-to 'lang.foglalas' class="button small-12 medium-centered columns"}}{{t 'arak.foglalas'}}{{/link-to}}
           </div>
         </div>{{/if}}
       </div>
 
-      <div class="small-12 medium-5 medium-offset-2 columns text-left">
-        <h3 class="medium-text-center">Aktuális akciónk</h3>
-        <p style="margin-bottom: 2rem;">Csatlakozz Facebook oldalunkhoz, hogy ne maradj le egyetlen akciónkról sem!</p>
+      <div class="small-12 medium-5 end columns text-left">
+        <h1 class="medium-text-center">{{t 'arak.aktualis-cim'}}</h1>
+        <p style="margin-bottom: 2rem;">{{t 'arak.aktualis-fb'}}</p>
         <div style="margin-left: auto; margin-right: auto; text-align: center;">
-          <div class="fb-like-box" data-height="350" data-href="https://www.facebook.com/bezarlak" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true"></div>
+          <fb:like-box href="https://www.facebook.com/bezarlak" height="360px" colorscheme="light" show_faces="true" header="false" stream="false" id="likebox" show_border="true"></fb:like-box>
         </div>
       </div>
     </div>
@@ -276,19 +307,74 @@
 
 
   <script type="text/x-handlebars" data-template-name="lang/foglalas">
-    <img src="/design/preloader.gif" style="position: absolute; top: 50%; left: 50%; margin-left: -64px; margin-top: -64px; z-index: -1;">
-    <iframe src="http://bezarlak.setmore.com/" scrolling="no" style="width: 100%; height: 100%; min-height: 38rem;"frameborder="0"></iframe>
-  </script>
+    <div id="setmore" style="display: none; margin-bottom: 0rem;">
+      <div class="show-for-small-only" style="height: 1.8rem"></div>  
+      <iframe src="http://bezarlak.setmore.com/" scrolling="no" style="width: 100%; min-height: 40rem;"frameborder="0"></iframe>
+    </div>
 
-  <script type="text/x-handlebars" data-template-name="lang/kapcsolat">
-    <div class="row" style="margin-bottom: 3rem;">
-      <div class="small-12 columns bg">
-        <h1 class="medium-text-center">Kapcsolat</h1>
-        <p></p>
+    <div class="row">
+      <div class="small-12 medium-6 columns text-left">
+        <h1 class="medium-text-center">{{t 'foglalas.online-cim'}}</h1>
+        <p>{{t 'foglalas.online-elso-bekezdes'}}</p>
+        <p style="margin-bottom: 2.8rem;">{{t 'foglalas.online-masodik-bekezdes'}}</p>
+        <a {{action 'showSetmore'}} id="showSetmore" class="button small-12 medium-centered columns" style="margin-bottom: 1rem;">{{t 'foglalas.online-gomb'}}</a>
+      </div>
+      <div class="small-12 medium-6 columns text-left">
+        <h1 class="medium-text-center">{{t 'foglalas.telefon-cim'}}</h1>
+        <p style="margin-bottom: 2rem;">{{t 'foglalas.telefon-elso-bekezdes'}}</p>
+        <div class="row text-center" style="padding-left: 1rem;">
+          <p style="font-weight: bold; margin-bottom: 0.4rem;">{{t 'foglalas.telefon-masodik-bekezdes'}}</p>
+            <p style="margin-bottom: 1.6rem;">{{t 'foglalas.telefon-harmadik-bekezdes'}}</p>
+        </div>
       </div>
     </div>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21576.24401645629!2d19.035712185374802!3d47.46983504744818!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741ddb829a74a25%3A0x13b2f2bb02e578c4!2sSzov%C3%A1ta+utca+2%2C+1115+Budapest%2C+Magyarorsz%C3%A1g!5e0!3m2!1shu!2s!4v1405963443948" frameborder="0" style="border:0; width:100%; height:24rem;"></iframe>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="lang/kapcsolat">
+    <div class="row">
+      <div class="small-12 medium-6 columns text-left">
+        <h1 class="medium-text-center">{{t 'kapcsolat.kerdes-cim'}}</h1>
+        <p style="margin-bottom: 2rem;" class="text-center">{{t 'kapcsolat.kerdes-szoveg'}}</p>
+
+        <div class="row">
+          <a target="_blank" href="http://facebook.com/bezarlak" class="small-4 medium-2 medium-offset-3 columns"><span class="webicon facebook large">BezárLak a Facebookon</span></a>
+          <a target="_blank" href="http://twitter.com/bezarlak" class="small-4 medium-2 columns"><span class="webicon twitter large">BezárLak a Twitteren</span></a>
+          <a href="m&#97;ilto:&#105;&#110;&#102;&#111;&#64;&#98;&#101;&#122;&#97;&#114;&#108;&#97;&#107;&#46;&#104;&#117;" class="small-4 medium-2 end columns"><span class="webicon mail large">BezárLak email</span></a>
+        </div>
+
+        <div class="row" style="margin-top: 2rem; padding-left: 1rem;">
+          <div class="small-12 columns text-center"><p style="font-weight: bold; margin-bottom: 0.4rem;">{{t 'foglalas.telefon-masodik-bekezdes'}}</p>
+            <p style="margin-bottom: 1.6rem;">{{t 'foglalas.telefon-harmadik-bekezdes'}}</p>
+
+            <ul class="vcard" style="width: 100%; text-align: center;">
+              <li class="fn">BezárLak</li>
+              <li class="locality"><span class="postal-code">1115</span> <span class="locality">Budapest</span></li>
+              <li class="street-address">Szováta utca 2/b</li>
+              <li class="email"><a href="m&#97;ilto:&#105;&#110;&#102;&#111;&#64;&#98;&#101;&#122;&#97;&#114;&#108;&#97;&#107;&#46;&#104;&#117;?subject=" title="">&#105;&#110;&#102;&#111;&#64;&#98;&#101;&#122;&#97;&#114;&#108;&#97;&#107;&#46;&#104;&#117;</a></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="small-12 medium-6 columns text-left">
+        <h1 class="medium-text-center">{{t 'kapcsolat.erkezes-cim'}}</h1>
+        <p style="margin-bottom: 3rem;">{{t 'kapcsolat.erkezes-elso-bekezdes'}}</p>
+
+        <h3 style="font-size: 1.2rem; font-weight: bold; margin-bottom: 0.6rem;">{{t 'kapcsolat.erkezes-masodik-bekezdes'}}</h3>
+        <div style="margin-left: 5%; margin-bottom: 2.4rem;">
+          <p style="margin-bottom: 0.2rem;">{{t 'kapcsolat.erkezes-harmadik-bekezdes'}}</p>
+          <p>{{t 'kapcsolat.erkezes-negyedik-bekezdes'}}</p>
+        </div>
+        <h3 style="font-size: 1.2rem; font-weight: bold; margin-bottom: 0.6rem;">{{t 'kapcsolat.erkezes-otodik-bekezdes'}}</h3>
+        <div style="margin-left: 5%;">
+          <p style="margin-bottom: 3rem;">{{t 'kapcsolat.erkezes-hatodik-bekezdes'}}</p>
+        </div>
+      </div>
+    </div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d21576.24401645629!2d19.035712185374802!3d47.46983504744818!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741ddb829a74a25%3A0x13b2f2bb02e578c4!2sSzov%C3%A1ta+utca+2%2C+1115+Budapest%2C+Magyarorsz%C3%A1g!5e0!3m2!1shu!2s!4v1405963443948" frameborder="0" style="border:0; width:100%; height:27rem;"></iframe>
   </script>
 
 </body>
