@@ -126,7 +126,7 @@
       <div class="small-12 medium-6 columns">
       <div class="hide-for-small-only" style="height: 34rem; text-align: center;"><img style="margin-top: 10.5rem; border: 1px solid #000;" src="/design/lakat.jpg" /></div>
       <blockquote><p style="font-weight: 400; font-size: 1.2rem;">Valamit nem vettünk észre. Bejutottunk a sötét szobába, de egyelőre semmit sem találtunk.</p>
-      <p style="font-weight: 600; font-size: 1.2rem;">Ketyeg az idő.</p>
+      <p style="font-weight: 600; font-size: 1.2rem;">Ketyeg az óra.</p>
       <p style="font-weight: 400; font-size: 1.2rem;">Van egy kulcsunk, amiről nem tudjuk, hogy hova való. Nem jöttünk még rá a táblára és a lábnyomokra. Ezen kívül van egy pohár vizünk, amit valaki itt felejthetett.</p>
       <p style="font-weight: 400; font-size: 1.2rem;">A többiek a táblát próbálják megfejteni, én pedig a sötétben matatok. Nagyon sok lakat van még hátra, és egy csomó szimbólum. Ó, egy tölcsér! Várjunk csak...</p>
       <cite class="text-right">egy BezárLak játékos naplója</cite></blockquote>
@@ -287,11 +287,12 @@
           -->
         </form>
 
-          {{#if capitaPrice}}<h3 class="text-center">{{t 'arak.listaar-fejenkent'}}{{capitaPrice}} Ft</h3>        <div class="row">
-        <div class="row">
-          {{#link-to 'lang.foglalas' class="button small-12 medium-centered columns"}}{{t 'arak.foglalas'}}{{/link-to}}
-          </div>
-        </div>{{/if}}
+          {{#if capitaPrice}}
+            <h3 class="text-center">{{t 'arak.listaar-fejenkent'}}{{capitaPrice}} Ft,<br /><small>összesen {{totalPrice}} Ft</small></h3>
+            <div class="row">
+              {{#link-to 'lang.foglalas' class="button small-12 medium-centered columns"}}{{t 'arak.foglalas'}}{{/link-to}}
+            </div>
+          {{/if}}
       </div>
 
       <div class="small-12 medium-5 end columns text-left">
