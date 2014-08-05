@@ -10,22 +10,22 @@ Ember.I18n.translations = {
 
   'bezarlak': {
     'mi-a-bezarlak': 'What is Clocked?',
-    'bal-elso-bek': 'Escape Game genre; this, for someone who had never experienced this genre of games before, of course doesn’t say much to them.',
-    'bal-masodik-bek': 'In one word: “Team-game”.',
-    'bal-harmadik-bek': 'Most people like challenges, which are entertaining, exciting, and doable. Isolated with friends in a new themed environment, cope with the tasks at hand.',
+    'bal-elso-bek': 'A \'real escape game\'; this however doesn’t mean much for newcomers of the genre.',
+    'bal-masodik-bek': 'To keep it short: “a team-game”.',
+    'bal-harmadik-bek': 'Most people like challenges that are entertaining, exciting, but also solvable. Isolated with just your friends in a new environment, coping with the tasks at hand.',
     'bal-negyedik-bek': 'Explore, process, solve, and collect achievements that you really have to fight for.',
-    'bal-otodik-bek': 'This is exactly what Clocked is all about.',
-    'bal-hatodik-bek': 'There is just one goal. Escape the room before the timer runs out. In this place, nothing is as it seems. Success depends on teamwork and logic.',
+    'bal-otodik-bek': 'This is exactly what Clocked is about.',
+    'bal-hatodik-bek': 'There is just one goal: escape the room before the timer runs out. In this place, nothing is as it seems. Success depends on teamwork and logic.',
     'bal-hetedik-bek': 'This is what makes it so exciting.',
-    'jobb-elso-bek': 'We did not notice something. We are in a dark room, but so far we could not find anything.',
+    'jobb-elso-bek': 'We must have missed something. We got into the dark room, but so far we haven’t found anything.',
     'jobb-masodik-bek': 'The clock is ticking.',
-    'jobb-harmadik-bek': 'We have a key, but we don’t know where to use it. We can’t figure out the board and the footprints. Also, we have a glass of water, which someone left behind',
+    'jobb-harmadik-bek': 'We have a key, but we don’t know where to use it. We still can’t figure out the whiteboard and the footprints. Also, we have a glass of water, which someone left behind.',
     'jobb-negyedik-bek': 'The others are trying to solve the board while I’m lost in the dark. We still have a lot of padlocks with symbols on them to open. Hmm… Here is a funnel! Wait a second...',
     'jobb-otodik-bek': 'from a player’s notebook',
-    'also-cim': 'All you have to do is three things to go through this, which are:',
+    'also-cim': 'To experience this, you only have to do 3 things:',
     'also-1': '<strong>Group up!</strong> A minimum of 2 players and a maximum of 5. With your partner, friends, family, or even enemy. You may come with anyone who is in the mood for an exciting adventure.',
     'also-2' : '<strong>Choose a room!</strong> We have two rooms with different themes and difficulty levels.',
-    'also-3': '<strong>Book</strong> online or via phone. Reserve a room on the spot to attend it! [A minimum of 2 hours grace time]',
+    'also-3': '<strong>Book</strong> online or via phone. You might even be able to play today. [A minimum of 2 hours grace time]',
     'gomb': 'I would like to see the rooms!'
   },
 
@@ -87,18 +87,18 @@ Ember.I18n.translations = {
   },
 
   'kapcsolat': {
-    'kerdes-cim': 'Do you have any questions for us?',
+    'kerdes-cim': 'Questions?',
     'kerdes-szoveg': 'If there is anything we can help you out with, don’t hesitate to contact us via social media, phone, or e-mail.',
     'kerdes-telefon': 'Phone:',
     'kerdes-email': 'Clocked e-mail', 
     'kerdes-twitter': 'Clocked on Twitter', 
     'kerdes-facebook': 'Clocked on Facebook', 
-    'erkezes-cim': 'How you get there?',
+    'erkezes-cim': 'Directions',
     'erkezes-elso-bekezdes': 'Our rooms can be found at the address below. We can recommend certain routes depending on how you would like to come.',
     'erkezes-masodik-bekezdes': 'By public transport:',
     'erkezes-harmadik-bekezdes': '19, 49 trams to <strong>“Karolina út”</strong> station,',
     'erkezes-negyedik-bekezdes': 'or 7, 87, 87A, 114, 173, 187, 213, 214 buses to <strong>Tétényi út</strong> station.',
     'erkezes-otodik-bekezdes': 'By car:',
-    'erkezes-hatodik-bekezdes': 'From Kovászna Street. Free of charge parking slots are usually available.'
+    'erkezes-hatodik-bekezdes': 'From Kovászna Street. Free of charge parking is usually available.'
   }
 };

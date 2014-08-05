@@ -86,7 +86,7 @@ App.LangController = Ember.ObjectController.extend({
     actions: {
         closeLanguage: function() {
             $("#language").slideUp("slow");
-            /* $("footer .language").show("slow"); */
+            $("footer .language").show("slow");
         },
 
         changeLanguage: function() {
