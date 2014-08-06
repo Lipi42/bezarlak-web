@@ -32,7 +32,7 @@ Ember.I18n.translations = {
   'szobak': {
     'cim': 'Rooms',
     'elso-bekezdes': 'At Clocked, we are awaiting you with two different adventures, where each have unique installations connected to their respected themes.',
-    'masodik-bekezdes': 'To solve the rooms’ challenges, <strong>you do not need any special knowledge.</strong> You just need attention, teamwork, and common sense. The main difference between the two rooms is mainly the design. We strongly suggest that you should try out both of the rooms independently of your range of interest',
+    'masodik-bekezdes': 'To solve the rooms’ challenges, <strong>you do not need any special knowledge.</strong> You just need attention, teamwork, and common sense. The main difference between the two rooms is mainly the design. We strongly suggest that you should try out both of the rooms independently of your range of interest.',
     'vegas-box-cim': 'Vegas',
     'vegas-box-elso-sor': '<strong>Theme:</strong> casino, poker',
     'vegas-box-masodik-sor': '2-5 players',
