@@ -14,7 +14,7 @@ Ember.I18n.translations = {
     'bal-masodik-bek': 'Egy szóval: csapatjáték.',
     'bal-harmadik-bek': 'A legtöbb ember kedveli az olyan kihívásokat, amelyek szórakoztatóak, izgalmasak és teljesíthetőek. Másoktól elszigetelten, néhány választott társsal, megbirkózni egy új környezet kihívásaival.',
     'bal-negyedik-bek': 'Felfedezni, haladni, megoldani. Sikerélményeket gyűjteni, melyekért valóban meg kell küzdeni.',
-    'bal-otodik-bek': 'rről szól a BezárLak.',
+    'bal-otodik-bek': 'Erről szól a BezárLak.',
     'bal-hatodik-bek': 'Egy cél lebeg a szemetek előtt: kijutni a szobából, mielőtt lejár a számláló. Itt azonban semmi sem az, aminek látszik. Csak a csapatmunkátokon és a logikátokon múlik, hogy sikerül-e.',
     'bal-hetedik-bek': 'És pont ettől izgalmas.',
     'jobb-elso-bek': 'Valamit nem vettünk észre. Bejutottunk a sötét szobába, de egyelőre semmit sem találtunk.',
