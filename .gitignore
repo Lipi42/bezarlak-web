@@ -2,6 +2,7 @@ bower_components/*
 public/*
 www/*
 www
+www/index.html
 
 lib-cov
 *.seed
