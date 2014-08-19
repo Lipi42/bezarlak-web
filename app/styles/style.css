@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  color: #ADC0FF;
   /* background-image: url(../design/background.jpg);
   background-size: contain;
   background-position: center top;
@@ -15,14 +16,19 @@ body {
   bottom: 0;
 }
 
+#topbar-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 #content {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
   padding-bottom:1rem;
   position: relative;
 }
 
 blockquote {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
   padding-bottom: 1rem;
 }
 
@@ -106,6 +112,12 @@ h2 {
   font-size: 3.3rem;
 }
 
+#content h3 {
+  color: #E89079;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
 h3.use-case {
   font-size: 1.4rem;
   font-weight: 300;
@@ -118,12 +130,11 @@ h3.use-case {
 #content h1 {
   margin: 3rem auto 3rem auto;
   padding-left: 0;
-  color: #000;
+  color: #fff;
   font-weight: bold;
   border-bottom: 1px solid #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 blockquote {
@@ -148,6 +159,11 @@ h3 {
 #scienceModal {
   max-height: 900px;
   max-width: 1200px;
+}
+
+#scienceModal, #vegasModal {
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 #hero {
@@ -190,5 +206,5 @@ form {
 }
 
 ul.vcard {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.1);
 }

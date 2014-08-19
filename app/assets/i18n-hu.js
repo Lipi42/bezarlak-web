@@ -12,7 +12,7 @@ Ember.I18n.translations = {
     'mi-a-bezarlak': 'Mi a BezárLak?',
     'bal-elso-bek': 'Mások szabadulós játéknak hívják; ez persze valakinek, aki még sosem próbálta ki, nem mond sokat.',
     'bal-masodik-bek': 'Egy szóval: csapatjáték.',
-    'bal-harmadik-bek': 'A legtöbb ember kedveli az olyan kihívásokat, amelyek szórakoztatóak, izgalmasak és teljesíthetőek. Másoktól elszigetelten, néhány választott társsal, megbirkózni egy új környezet kihívásaival.',
+    'bal-harmadik-bek': 'A legtöbb ember kedveli az olyan kihívásokat, amelyek szórakoztatóak, izgalmasak, de mégis teljesíthetőek. Másoktól elszigetelten, néhány választott társsal, megbirkózni egy új környezet kihívásaival.',
     'bal-negyedik-bek': 'Felfedezni, haladni, megoldani. Sikerélményeket gyűjteni, melyekért valóban meg kell küzdeni.',
     'bal-otodik-bek': 'Erről szól a BezárLak.',
     'bal-hatodik-bek': 'Egy cél lebeg a szemetek előtt: kijutni a szobából, mielőtt lejár a számláló. Itt azonban semmi sem az, aminek látszik. Csak a csapatmunkátokon és a logikátokon múlik, hogy sikerül-e.',
