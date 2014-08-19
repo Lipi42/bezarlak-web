@@ -76,6 +76,10 @@ div.row {
   margin-bottom: 2rem;
 }
 
+.pricing-table {
+  border-color: #14b6fe;
+}
+
 .pricing-table li.title {
   color: #333;
   background: none;
@@ -113,7 +117,7 @@ h2 {
 }
 
 #content h3 {
-  color: #CF4D1A;
+  color: #14b6fe;
   font-size: 1.4rem;
   font-weight: bold;
 }
@@ -127,10 +131,15 @@ h3.use-case {
   border: 1px solid #999;
 }
 
+label {
+  font-size: 1rem;
+  color: #CF4D1A;
+}
+
 #content h1 {
   margin: 3rem auto 3rem auto;
   padding-left: 0;
-  color: #4153E6;
+  color: #CF4D1A;
   font-weight: 500 !important;
   border-bottom: 1px solid #fff;
   font-family: 'Open Sans', sans-serif;
@@ -147,7 +156,7 @@ blockquote p {
 
 cite {
   color: #4153E6 !important;
-  font-size: 1.2rem;
+  font-size: 1.1rem !important;
 }
 
 h3 {
