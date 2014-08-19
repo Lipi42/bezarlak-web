@@ -1,7 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  color: #ADC0FF;
+  color: #fff;
   /* background-image: url(../design/background.jpg);
   background-size: contain;
   background-position: center top;
@@ -21,7 +21,7 @@ body {
 }
 
 #content {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.45);
   padding-bottom:1rem;
   position: relative;
 }
@@ -113,7 +113,7 @@ h2 {
 }
 
 #content h3 {
-  color: #E89079;
+  color: #CF4D1A;
   font-size: 1.4rem;
   font-weight: bold;
 }
@@ -130,8 +130,8 @@ h3.use-case {
 #content h1 {
   margin: 3rem auto 3rem auto;
   padding-left: 0;
-  color: #fff;
-  font-weight: bold;
+  color: #4153E6;
+  font-weight: 500 !important;
   border-bottom: 1px solid #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -139,6 +139,15 @@ h3.use-case {
 
 blockquote {
   margin-top: 1rem;
+}
+
+blockquote p {
+  color: #fff;
+}
+
+cite {
+  color: #4153E6 !important;
+  font-size: 1.2rem;
 }
 
 h3 {
