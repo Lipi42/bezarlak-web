@@ -1,7 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  background-color: #999;
   /* background-image: url(../design/background.jpg);
   background-size: contain;
   background-position: center top;
@@ -17,16 +16,21 @@ body {
 }
 
 #content {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
   padding-bottom:1rem;
   position: relative;
+}
+
+blockquote {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding-bottom: 1rem;
 }
 
 video#bgvid {
   position: fixed; right: 0; bottom: 0;
   min-width: 100%; min-height: 100%;
   width: auto; height: auto; z-index: -100;
-  background: url(video/polina.jpg) no-repeat;
+  background: url(../video/science.png) no-repeat;
   background-size: cover;
 }
 
@@ -76,6 +80,11 @@ div.row {
 
 .pricing-table li.bullet-item {
   font-size: 1.2rem !important;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.pricing-table li.cta-button {
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 li.title h2 {
@@ -154,6 +163,10 @@ h3 {
   min-height: 100%;
 }
 
+hr {
+  border-color: red;
+}
+
 footer {
   width: 100%;
   background-color: rgba(40, 40, 40, 0.9);
@@ -172,4 +185,8 @@ form .row {
 
 form {
   margin-bottom: 1.9rem;
+}
+
+ul.vcard {
+  background-color: rgba(255, 255, 255, 0.7);
 }
