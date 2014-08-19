@@ -31,7 +31,7 @@ Ember.I18n.translations = {
 
   'szobak': {
     'cim': 'Szobáink',
-    'elso-bekezdes': 'A BezárLakban két teljesen különböző kalanddal várunk Titeket, melyek egy-egy egyedileg berendezett, adott téma köré épülő, különböző kihívásokat jelentő szobát takarnak.',
+    'elso-bekezdes': 'A BezárLakban két teljesen egyedi kalanddal várunk, melyek egy-egy különlegesen berendezett, adott téma köré épülő, különböző kihívásokat jelentő szobát takarnak.',
     'masodik-bekezdes': 'A szobák megoldásához semelyik esetben <strong>nincs szükség különleges ismeretekre,</strong> csupán figyelemre, jó csapatmunkára és nem utolsó sorban logikára. A fő eltérés a témákban, hangulatban mutatkozik meg, de bátran ajánljuk, hogy mindkét szobát próbáljátok ki érdeklődési körtől függetlenül.',
     'vegas-box-cim': 'Vegas',
     'vegas-box-elso-sor': '<strong>Téma:</strong> kaszinó, póker',

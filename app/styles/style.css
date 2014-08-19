@@ -16,7 +16,7 @@ body {
 }
 
 #content {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   padding-bottom:1rem;
   position: relative;
 }
@@ -87,6 +87,11 @@ div.row {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+li.cta-button .button {
+  font-weight: bold;
+  width: 100%;
+}
+
 li.title h2 {
   position: relative;
   padding-top: none;
@@ -115,9 +120,10 @@ h3.use-case {
   padding-left: 0;
   color: #000;
   font-weight: bold;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 blockquote {
@@ -161,10 +167,6 @@ h3 {
 
 .off-canvas-wrap {
   min-height: 100%;
-}
-
-hr {
-  border-color: red;
 }
 
 footer {

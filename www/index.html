@@ -29,7 +29,12 @@
 
   <div class="inner-wrap">
 
-    <div id="language" style="display: none;">
+    <video autoplay loop poster="/video/science.png" id="bgvid" class="hide-for-small-only">
+      <source src="/video/science.webm" type="video/webm">
+      <source src="/video/science.mp4" type="video/mp4">
+    </video>
+
+    <div id="language">
       <a class="switch-language" {{action changeLanguage}}>{{t menu.nyelv}}</a>
       <a class="close-language" {{action closeLanguage}}>&#215;</a>
     </div>
@@ -46,7 +51,7 @@
       </div>
     </nav>
 
-    <aside class="right-off-canvas-menu">
+    <aside class="right-off-canvas-menu hide-for-medium-up">
       <ul class="off-canvas-list">
         <li><label></label></li>
         <li>{{#link-to 'lang.index'}}<img src="/design/menu/fooldal.png" style="height: 2rem;"> {{t 'menu.BezárLak'}}{{/link-to}}</li>
@@ -111,7 +116,7 @@
 
     <div class="row" style="padding-bottom: 1.4rem; padding-top: 1rem;">
       
-      <div class="small-12 medium-6 columns">
+      <div class="small-12 medium-10 medium-centered columns">
 
         <h1 class="medium-text-center hide-for-small-only" style="font-size: 2.8rem; border-bottom: none;">{{t 'bezarlak.mi-a-bezarlak'}}</h1>
         <h1 class="medium-text-center show-for-small-only" style="font-size: 2rem; border-bottom: none; margin-top:1.4rem; margin-bottom: 1rem;">{{t 'bezarlak.mi-a-bezarlak'}}</h1>
@@ -123,8 +128,10 @@
         <p>{{t 'bezarlak.bal-hatodik-bek'}}</p>
         <p>{{t 'bezarlak.bal-hetedik-bek'}}</p>
       </div>  
-      <div class="small-12 medium-6 columns">
-      <div class="hide-for-small-only" style="height: 34rem; text-align: center;"><img style="margin-top: 10.5rem; border: 1px solid #000;" src="/design/lakat.jpg" /></div>
+    </div>
+
+    <div class="row" style="padding-bottom: 1.4rem; padding-top: 1rem;">
+      <div class="small-12 medium-10 medium-centered columns">
       <blockquote><p style="font-weight: 400; font-size: 1.2rem;">{{t 'bezarlak.jobb-elso-bek'}}</p>
       <p style="font-weight: 600; font-size: 1.2rem;">{{t 'bezarlak.jobb-masodik-bek'}}</p>
       <p style="font-weight: 400; font-size: 1.2rem;">{{t 'bezarlak.jobb-harmadik-bek'}}</p>
@@ -171,13 +178,13 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="szobak">
-     <div class="row" style="margin-bottom: 3rem;">
+
+    <div class="row" style="margin-bottom: 1rem;">
       <div class="small-12 columns bg">
         <h1 class="medium-text-center">{{t 'szobak.cim'}}</h1>
-        <p>{{t 'szobak.elso-bekezdes'}}</p>
-        <p>{{t 'szobak.masodik-bekezdes'}}</p>
       </div>
     </div>
+
     <div class="row">
       <div class="small-12 medium-5 columns text-left">
         <ul class="pricing-table">
@@ -197,6 +204,13 @@
           <li class="bullet-item">{{t 'szobak.science-box-harmadik-sor'}}</li>
           <li class="cta-button">{{#link-to 'szobak.science' class='button'}}{{t 'szobak.science-box-gomb'}}{{/link-to}}</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="small-12 columns bg">
+        <p>{{t 'szobak.elso-bekezdes'}}</p>
+        <p>{{t 'szobak.masodik-bekezdes'}}</p>
       </div>
     </div>
 
@@ -281,8 +295,6 @@
                 }}
             </label>
           </div>
-          <!--
-          -->
         </form>
 
           {{#if capitaPrice}}
