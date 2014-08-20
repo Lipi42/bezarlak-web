@@ -1,4 +1,14 @@
 Ember.I18n.translations = {
+  'titles': {
+    'index': 'Clocked Room Escape Game in Budapest',
+    'szobak.index': 'Games - Clocked',
+    'szobak.vegas': 'Vegas - Clocked',
+    'szobak.science': 'Science - Clocked',
+    'arak': 'Prices - Clocked',
+    'foglalas': 'Booking - Clocked',
+    'kapcsolat': 'Contact - Clocked',
+  },
+
   'menu': {
     'nyelv': 'válts magyarra',
     'BezárLak': 'Clocked',
@@ -11,46 +21,46 @@ Ember.I18n.translations = {
   'bezarlak': {
     'mi-a-bezarlak': 'What is Clocked?',
     'bal-elso-bek': 'A \'real escape game\'; this however doesn’t mean much for newcomers of the genre.',
-    'bal-masodik-bek': 'To keep it short: “a team-game”.',
-    'bal-harmadik-bek': 'Most people like challenges that are entertaining, exciting, but also solvable. Isolated with just your friends in a new environment, coping with the tasks at hand.',
-    'bal-negyedik-bek': 'Explore, process, solve, and collect achievements that you really have to fight for.',
+    'bal-masodik-bek': '“Revolutionary team-game” might do.',
+    'bal-harmadik-bek': 'Most people like challenges that are entertaining, exciting, but still solvable. Come and let us isolate your from the outside world with your friends only, where you will need to cope with the tasks at hand &ndash; nothing else.',
+    'bal-negyedik-bek': 'Explore, process, solve and achieve things that you really have to use your skills for.',
     'bal-otodik-bek': 'This is exactly what Clocked is about.',
-    'bal-hatodik-bek': 'There is just one goal: escape the room before the timer runs out. In this place, nothing is as it seems. Success depends on teamwork and logic.',
+    'bal-hatodik-bek': 'There is just one goal: escape the room before the timer runs out. However, everything has a different meaning in here. Success depends on your teamwork and logic.',
     'bal-hetedik-bek': 'This is what makes it so exciting.',
-    'jobb-elso-bek': 'We must have missed something. We got into the dark room, but so far we haven’t found anything.',
+    'jobb-elso-bek': 'We must have missed something. We made it into the dark room, but so far we haven’t found anything.',
     'jobb-masodik-bek': 'The clock is ticking.',
-    'jobb-harmadik-bek': 'We have a key, but we don’t know where to use it. We still can’t figure out the whiteboard and the footprints. Also, we have a glass of water, which someone left behind.',
-    'jobb-negyedik-bek': 'The others are trying to solve the board while I’m lost in the dark. We still have a lot of padlocks with symbols on them to open. Hmm… Here is a funnel! Wait a second...',
+    'jobb-harmadik-bek': 'We have a key, but we don’t know where to use it. We still can’t figure out the whiteboard and the footprints. Also, we have a glass of water, which someone must have left behind.',
+    'jobb-negyedik-bek': 'The others are trying to solve the board while I’m lost in the dark. We still have a lot of padlocks with symbols on them to open. Hmm… a funnel! Wait a second...',
     'jobb-otodik-bek': 'from a player’s notebook',
-    'also-cim': 'To experience this, you only have to do 3 things:',
-    'also-1': '<strong>Group up!</strong> A minimum of 2 players and a maximum of 5. With your partner, friends, family, or even enemy. You may come with anyone who is in the mood for an exciting adventure.',
+    'also-cim': 'Follow these instructions to live the Clocked experience:',
+    'also-1': '<strong>Group up!</strong> A minimum of 2 players and maximum of 5. Bring your partner, friends, family, or even enemy. You may come with anyone who is in the mood for an exciting adventure.',
     'also-2' : '<strong>Choose a room!</strong> We have two rooms with different themes and difficulty levels.',
-    'also-3': '<strong>Book</strong> online or via phone. You might even be able to play today. [A minimum of 2 hours grace time]',
-    'gomb': 'I would like to see the rooms!'
+    'also-3': '<strong>Book</strong> online or via phone. You might even be able to play today. (Online booking is with a minimum of 2 hours grace time)',
+    'gomb': 'Let’s see the games!'
   },
 
   'szobak': {
     'cim': 'Rooms',
-    'elso-bekezdes': 'At Clocked, we are awaiting you with two different adventures, where each have unique installations connected to their respected themes.',
-    'masodik-bekezdes': 'To solve the rooms’ challenges, <strong>you do not need any special knowledge.</strong> You just need attention, teamwork, and common sense. The main difference between the two rooms is mainly the design. We strongly suggest that you should try out both of the rooms independently of your range of interest.',
+    'elso-bekezdes': 'Two unique adventures await you if you plan on visiting Clocked. The puzzles, logic and main topic are very different in the two rooms.',
+    'masodik-bekezdes': '<strong>No special knowledge is needed</strong> to play either of the two games. All you need is attention, great teamwork, and some common sense. The chief difference between the two games is the theme. However, we strongly suggest you to play any or both of the rooms regardless of your interests.',
     'vegas-box-cim': 'Vegas',
     'vegas-box-elso-sor': '<strong>Theme:</strong> casino, poker',
-    'vegas-box-masodik-sor': '2-5 players',
-    'vegas-box-harmadik-sor': '60 minutes',
+    'vegas-box-masodik-sor': '<strong>Difficulty:</strong> medium-hard',
+    'vegas-box-harmadik-sor': '2-5 players',
     'vegas-box-gomb': 'Details',
     'science-box-cim': 'Science',
     'science-box-elso-sor': '<strong>Theme:</strong> science',
-    'science-box-masodik-sor': '2-4 players',
-    'science-box-harmadik-sor': '60 minutes',
+    'science-box-masodik-sor': '<strong>Difficulty:</strong> beginner-medium',
+    'science-box-harmadik-sor': '2-4 players',
     'science-box-gomb': 'Details',
-    'vegas-felugro-elso-bek': 'In our Vegas room, we are guiding you into the world of poker. You can experience the spirit of a real poker place while various tasks, puzzles, and riddles will give you a hard time to break out of the room',
+    'vegas-felugro-elso-bek': 'In Vegas we are guiding you into the world of poker. You can experience the spirit of a real poker place while various tasks, puzzles, and riddles will give you a hard time to break out of the room',
     'vegas-felugro-masodik-bek': 'You will have <strong>60 minutes</strong> solve all the tasks in the room to open the door and escape. Teams consist of <strong>2-5 people</strong>.',
     'vegas-felugro-harmadik-bek': 'We recommend this room <strong>for experienced players</strong> who have seen Escape Rooms before, however it is not a requirement and likewise it will not be a handicap situation if you have not',
-    'vegas-felugro-gomb': 'How much would this cost?',
+    'vegas-felugro-gomb': 'What much is the ante?',
     'science-felugro-elso-bek': 'The name can be scary for those who prefer the humanities, but do not forget the fact that we would not have computers, Iron Man, or <strong>lspectacular blacklight</strong> without science.',
     'science-felugro-masodik-bek': 'To solve these tasks you do not need any scientific knowledge; anyone can enjoy these puzzles, whether you are a pro or a first-timer who is just experiencing this genre of games.',
     'science-felugro-harmadik-bek': 'You can participate as a team of <strong>2-4 players</strong>, and you have <strong>60 minutes</strong> to find the way out. Are you ready?',
-    'science-felugro-gomb': 'How much would this cost?'
+    'science-felugro-gomb': 'How much is it?'
   },
 
   'felugro': {
@@ -61,17 +71,22 @@ Ember.I18n.translations = {
   'arak': {
     'cim': 'Prices',
     'szoveg': 'Games',
-    'listaar-cim': 'Price',
-    'listaar-elso-bek': 'With this calculator you can find out how much the game will cost per person.',
-    'listaar-masodik-bek': 'If you would like to gift the game for someone else or you are interested in teambuilding for your company, please call us!',
-    'listaar-terem': 'Choose a room!',
-    'listaar-letszam': 'How many are you in the team?',
-    'listaar-diak': 'Do you have at least two valid Student Cards?',
-    'listaar-fejenkent': 'Per person: ',
-    'listaar-osszesen': 'in the aggregate: ',
-    'foglalas': 'Booking',
-    'aktualis-cim': 'Current discounts',
-    'aktualis-fb': 'Join our Facebook page now to make sure you don’t miss any of our great offers!'
+    'listaar-cim': 'Normal price',
+    'listaar-elso-bek': 'With this calculator you can find out how much your game costs.',
+    'listaar-masodik-bek': 'If you would like to give the experience of Clocked as a present or you are interested in teambuilding for your company, please give us a call!',
+    'listaar-terem': 'Which game would you like to play?',
+    'listaar-letszam': 'How many players?',
+    'listaar-diak': 'Do two of you have valid Student Cards?',
+    'listaar-fejenkent': 'Per capita: ',
+    'listaar-osszesen': 'in total: ',
+    'foglalas': 'Let`s play!',
+    'aktualis-cim': 'Discounts',
+    'aktualis-fb': 'Join our Facebook page now to make sure you don’t miss any of our great offers!',
+    'valassz': 'Choose one!',
+    'nincs': 'No',
+    'van': 'Yes',
+    'igen': 'Yes',
+    'nem': 'No',
   },
 
   'foglalas': {
@@ -99,6 +114,6 @@ Ember.I18n.translations = {
     'erkezes-harmadik-bekezdes': '19, 49 trams to <strong>“Karolina út”</strong> station,',
     'erkezes-negyedik-bekezdes': 'or 7, 87, 87A, 114, 173, 187, 213, 214 buses to <strong>Tétényi út</strong> station.',
     'erkezes-otodik-bekezdes': 'By car:',
-    'erkezes-hatodik-bekezdes': 'From Kovászna Street. Free of charge parking is usually available.'
+    'erkezes-hatodik-bekezdes': 'From Kovászna Street. Parking spots are usually available free of charge.'
   }
 };

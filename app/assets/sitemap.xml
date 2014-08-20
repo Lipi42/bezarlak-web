@@ -1,26 +1,74 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://www.bezarlak.hu/hu</loc>
-  </url>
-  <url>
-    <loc>http://www.bezarlak.hu/</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="http://www.bezarlak.hu/en" />
   </url>
   <url>
     <loc>http://www.bezarlak.hu/hu/kapcsolat</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="http://www.bezarlak.hu/en/kapcsolat" />
   </url>
   <url>
     <loc>http://www.bezarlak.hu/hu/arak</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="http://www.bezarlak.hu/en/arak" />
   </url>
   <url>
     <loc>http://www.bezarlak.hu/hu/foglalas</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="http://www.bezarlak.hu/en/foglalas" />
   </url>
   <url>
     <loc>http://www.bezarlak.hu/hu/szobaink</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="http://www.bezarlak.hu/en/szobaink" />
   </url>
   <url>
     <loc>http://www.bezarlak.hu/hu/szobaink/vegas</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="http://www.bezarlak.hu/en/szobaink/vegas" />
   </url>
   <url>
     <loc>http://www.bezarlak.hu/hu/szobaink/science</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="http://www.bezarlak.hu/en/szobaink/science" />
   </url>
+
+  <url>
+    <loc>http://www.bezarlak.hu/en</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="hu" href="http://www.bezarlak.hu/hu" />
+  </url>
+  <url>
+    <loc>http://www.bezarlak.hu/en/kapcsolat</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="hu" href="http://www.bezarlak.hu/hu/kapcsolat" />
+  </url>
+  <url>
+    <loc>http://www.bezarlak.hu/en/arak</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="hu" href="http://www.bezarlak.hu/hu/arak" />
+  </url>
+  <url>
+    <loc>http://www.bezarlak.hu/en/foglalas</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="hu" href="http://www.bezarlak.hu/hu/foglalas" />
+  </url>
+  <url>
+    <loc>http://www.bezarlak.hu/en/szobaink</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="hu" href="http://www.bezarlak.hu/hu/szobaink" />
+  </url>
+  <url>
+    <loc>http://www.bezarlak.hu/en/szobaink/vegas</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="hu" href="http://www.bezarlak.hu/hu/szobaink/vegas" />
+  </url>
+  <url>
+    <loc>http://www.bezarlak.hu/en/szobaink/science</loc>
+    <lastmod>2014-08-20</lastmod>
+    <xhtml:link rel="alternate" hreflang="hu" href="http://www.bezarlak.hu/hu/szobaink/science" />
+  </url>  
 </urlset>

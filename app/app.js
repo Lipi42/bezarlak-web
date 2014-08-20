@@ -18,10 +18,11 @@ window.fbAsyncInit = function() {
         xfbml      : true  // parse XFBML
     });
     FB.XFBML.parse();
-    console.log("ok");
 }
 
 var App = Ember.Application.create();
+
+
 
 App.Router.map(function() {
     this.route('index', {path: '/'});
@@ -36,6 +37,15 @@ App.Router.map(function() {
         this.route('kapcsolat', { path: '/kapcsolat' });
     });
 });
+
+Ember.Route.reopen({
+  activate: function() {
+    this._super();
+    var namedRoute = this.routeName.replace('lang.', '');
+    document.title = Ember.I18n.translations.titles[namedRoute];
+  }
+});
+
 App.ResetScroll = Ember.Mixin.create({
   activate: function() {
     this._super();
@@ -67,7 +77,7 @@ App.LangRoute = Ember.Route.extend({
         var self = this;
         return new Ember.RSVP.Promise(function(resolve) {
             $.getScript("./i18n-" + params.lang_code + ".js", function() {
-                resolve({lang: params.lang_code});
+                resolve({lang: params.lang_code, translations: Ember.I18n.translations});
             });
         });
     },
@@ -145,8 +155,17 @@ App.SzobakVegasController = App.SzobakScienceController = Ember.Controller.exten
 
 
 App.LangArakController = Ember.Controller.extend({
-    sGames: ['Válassz!', 'Vegas', 'Science'],
-    sIH: [{nincsvan: 'nincs', igennem: 'nem', bool: 0}, {nincsvan: 'van', igennem: 'igen', bool: 1}],
+    needs: 'lang',
+    trans: Ember.computed.alias('controllers.lang.content.translations'),
+
+    sGames: function() {
+        return [this.get('trans.arak.valassz'), 'Vegas', 'Science'];
+    }.property(),
+
+    sIH: function() {
+        return [{nincsvan: this.get('trans.arak.nincs'), igennem: this.get('trans.arak.nem'), bool: 0},
+                {nincsvan: this.get('trans.arak.van'), igennem: this.get('trans.arak.igen'), bool: 1}];
+    }.property(),
 
     extrasDisabled: function() {
         if(this.get('selectedGame') && this.get('selectedPeople')) return false;
@@ -155,8 +174,8 @@ App.LangArakController = Ember.Controller.extend({
 
     sPeople: function() {
         if(this.get('selectedGame')===undefined) return false;
-        if(this.get('selectedGame')==='Vegas') return ['Válassz!', 2, 3, 4, 5, '5+1'];
-        if(this.get('selectedGame')==='Science') return ['Válassz!', 2, 3, 4, '4+1'];
+        if(this.get('selectedGame')==='Vegas') return [this.get('trans.arak.valassz'), 2, 3, 4, 5, '5 + 1'];
+        if(this.get('selectedGame')==='Science') return [this.get('trans.arak.valassz'), 2, 3, 4, '4 + 1'];
     }.property('selectedGame'),
 
     totalPrice: function() {
@@ -167,7 +186,7 @@ App.LangArakController = Ember.Controller.extend({
 
         if(this.get('selectedDiak')==true) totalPrice = Math.floor(totalPrice * 0.8 / 100, 2)*100-10;
 
-        if(this.get('selectedPeople') == '4+1' || this.get('selectedPeople') == '5+1') {
+        if(this.get('selectedPeople') == '4 + 1' || this.get('selectedPeople') == '5 + 1') {
             totalPrice += 1400;
         }
 
@@ -175,7 +194,7 @@ App.LangArakController = Ember.Controller.extend({
     }.property('selectedGame', 'selectedPeople', 'selectedDiak', 'selectedVoucher'),
 
     capitaPrice: function() {
-        var people = (this.get('selectedPeople')=='4+1' || this.get('selectedPeople')=='5+1') ? eval(this.get('selectedPeople')) : this.get('selectedPeople');
+        var people = (this.get('selectedPeople')=='4 + 1' || this.get('selectedPeople')=='5 + 1') ? eval(this.get('selectedPeople')) : this.get('selectedPeople');
         return Math.ceil(this.get('totalPrice')/people/10, 1)*10;
     }.property('totalPrice')
 });

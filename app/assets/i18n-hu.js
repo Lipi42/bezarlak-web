@@ -1,4 +1,14 @@
 Ember.I18n.translations = {
+  'titles': {
+    'index': 'BezárLak Szabadulós Játék Budapesten',
+    'szobak.index': 'Játékok - BezárLak',
+    'szobak.vegas': 'Vegas - BezárLak',
+    'szobak.science': 'Science - BezárLak',
+    'arak': 'Árak - BezárLak',
+    'foglalas': 'Foglalás - BezárLak',
+    'kapcsolat': 'Kapcsolat - BezárLak',
+  },
+
   'menu': {
     'nyelv': 'click here to switch to English',
     'BezárLak': 'BezárLak',
@@ -71,7 +81,12 @@ Ember.I18n.translations = {
     'listaar-osszesen': 'összesen: ',
     'foglalas': 'Foglalás',
     'aktualis-cim': 'Aktuális akciónk',
-    'aktualis-fb': 'Csatlakozz Facebook oldalunkhoz, hogy ne maradj le egyetlen akciónkról sem!'
+    'aktualis-fb': 'Csatlakozz Facebook oldalunkhoz, hogy ne maradj le egyetlen akciónkról sem!',
+    'valassz': 'Válassz!',
+    'nincs': 'Nincs',
+    'van': 'Van',
+    'igen': 'Igen',
+    'nem': 'Nem',
   },
 
   'foglalas': {
