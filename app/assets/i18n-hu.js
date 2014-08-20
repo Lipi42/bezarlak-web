@@ -6,7 +6,19 @@ Ember.I18n.translations = {
     'szobak.science': 'Science - BezárLak',
     'arak': 'Árak - BezárLak',
     'foglalas': 'Foglalás - BezárLak',
-    'kapcsolat': 'Kapcsolat - BezárLak',
+    'kapcsolat': 'Kapcsolat - BezárLak'
+  },
+
+  'descriptions': {
+    'default': 'Próbáld ki Magyarország egyetlen pókeres szabadulós játékát, vagy a nagy sikerű, tudományos témájú Sciencet!',
+    'szobak.index': 'Válassz két teljesen különböző logikájú, látványvilágú szabadulós játékunk közül!',
+    'arak': '3-5 fő esetén már olcsóbb, mint a legtöbb mozijegy. Azt, hogy jobb is, mi garantáljuk.',
+    'foglalas': 'Foglalj időpontot online vagy telefonon! Akár már ma is jöhettek ;)',
+    'kapcsolat': 'Bármilyen kérdéssel fordulhattok hozzánk bizalommal.',
+
+    'szobak.vegas': 'Magyarország egyetlen pókeres témájú szabadulós szobája, 99%-os elégedettséggel és jóval alacsonyabb kijutási rátával.',
+    'szobak.science': 'Mindig is űrhajós akartál lenni? Ebben mondjuk nem tudunk segíteni, de ha érdekel a tudomány, a fények, a kütyük, ez nagyon fog tetszeni!',
+
   },
 
   'menu': {

@@ -43,6 +43,9 @@ Ember.Route.reopen({
     this._super();
     var namedRoute = this.routeName.replace('lang.', '');
     document.title = Ember.I18n.translations.titles[namedRoute];
+    console.log(Ember.I18n.translations.descriptions[namedRoute]);
+    if(Ember.I18n.translations.descriptions[namedRoute]) $('meta[name=description]').attr('content', Ember.I18n.translations.descriptions[namedRoute]);
+    else $('meta[name=description]').attr('content', Ember.I18n.translations.descriptions['default']);
   }
 });
 

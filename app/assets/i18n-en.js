@@ -9,6 +9,18 @@ Ember.I18n.translations = {
     'kapcsolat': 'Contact - Clocked',
   },
 
+  'descriptions': {
+    'default': 'Try the only poker themed room escape game in Hungary, or visit the highly successful Science with all its fancy equipment!',
+
+    'szobak.index': 'Choose from our two, totally unique escape room adventures. Is it going to be Vegas or Science?',
+    'arak': 'Bring some friends and pay less than for a cinema ticket. The (much) higher fun factor is guaranteed by us!',
+    'foglalas': 'Everything ready? Book a game or two right now. If you are lucky, you might even be able to come today.',
+    'kapcsolat': 'Please contact is with any questions you have &ndash; we are very happy to help.',
+
+    'szobak.vegas': 'The only poker themed escape game in the world. The 99% satisfaction and a much lower success rate speak for themselves.',
+    'szobak.science': 'Have you given up on your dream to become an astronaut? We can’t help with that, but if you love science, cool lights and equipment, you’ll love this!',
+  },
+
   'menu': {
     'nyelv': 'válts magyarra',
     'BezárLak': 'Clocked',
@@ -25,7 +37,7 @@ Ember.I18n.translations = {
     'bal-harmadik-bek': 'Most people like challenges that are entertaining, exciting, but still solvable. Come and let us isolate your from the outside world with your friends only, where you will need to cope with the tasks at hand &ndash; nothing else.',
     'bal-negyedik-bek': 'Explore, process, solve and achieve things that you really have to use your skills for.',
     'bal-otodik-bek': 'This is exactly what Clocked is about.',
-    'bal-hatodik-bek': 'There is just one goal: escape the room before the timer runs out. However, everything has a different meaning in here. Success depends on your teamwork and logic.',
+    'bal-hatodik-bek': 'There is but one goal: escape the room before the timer runs out. However, everything has a different meaning in here. Success depends on your teamwork and logic.',
     'bal-hetedik-bek': 'This is what makes it so exciting.',
     'jobb-elso-bek': 'We must have missed something. We made it into the dark room, but so far we haven’t found anything.',
     'jobb-masodik-bek': 'The clock is ticking.',
@@ -42,7 +54,7 @@ Ember.I18n.translations = {
   'szobak': {
     'cim': 'Rooms',
     'elso-bekezdes': 'Two unique adventures await you if you plan on visiting Clocked. The puzzles, logic and main topic are very different in the two rooms.',
-    'masodik-bekezdes': '<strong>No special knowledge is needed</strong> to play either of the two games. All you need is attention, great teamwork, and some common sense. The chief difference between the two games is the theme. However, we strongly suggest you to play any or both of the rooms regardless of your interests.',
+    'masodik-bekezdes': '<strong>No special knowledge is needed</strong> to play either of the two games. All you need is attention, great teamwork, and some common sense. The chief difference between the two games is the theme. However, we strongly suggest you play any or both of the rooms regardless of your interests.',
     'vegas-box-cim': 'Vegas',
     'vegas-box-elso-sor': '<strong>Theme:</strong> casino, poker',
     'vegas-box-masodik-sor': '<strong>Difficulty:</strong> medium-hard',
@@ -57,7 +69,7 @@ Ember.I18n.translations = {
     'vegas-felugro-masodik-bek': 'You will have <strong>60 minutes</strong> solve all the tasks in the room to open the door and escape. Teams consist of <strong>2-5 people</strong>.',
     'vegas-felugro-harmadik-bek': 'We recommend this room <strong>for experienced players</strong> who have seen Escape Rooms before, however it is not a requirement and likewise it will not be a handicap situation if you have not',
     'vegas-felugro-gomb': 'What much is the ante?',
-    'science-felugro-elso-bek': 'The name can be scary for those who prefer the humanities, but do not forget the fact that we would not have computers, Iron Man, or <strong>lspectacular blacklight</strong> without science.',
+    'science-felugro-elso-bek': 'The name can be scary for those who prefer the humanities, but do not forget the fact that we would not have computers, Iron Man, or <strong>cool blacklight</strong> without science.',
     'science-felugro-masodik-bek': 'To solve these tasks you do not need any scientific knowledge; anyone can enjoy these puzzles, whether you are a pro or a first-timer who is just experiencing this genre of games.',
     'science-felugro-harmadik-bek': 'You can participate as a team of <strong>2-4 players</strong>, and you have <strong>60 minutes</strong> to find the way out. Are you ready?',
     'science-felugro-gomb': 'How much is it?'
