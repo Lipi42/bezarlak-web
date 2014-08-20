@@ -21,13 +21,13 @@ body {
 }
 
 #content {
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0,0,0, 0.1);
   padding-bottom:1rem;
   position: relative;
 }
 
 blockquote {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(150, 150, 150, 0.2);
   width: 100%;
   padding-bottom: 1rem;
 }
@@ -36,21 +36,21 @@ video#bgvid {
   position: fixed; right: 0; bottom: 0;
   min-width: 100%; min-height: 100%;
   width: auto; height: auto; z-index: -100;
-  background: url(../video/science.png) no-repeat;
-  background-size: cover;
+  background: url(../video/science.jpg) no-repeat;
 }
 
 #language {
   width: 100%;
   text-align:center;
-  background-color: #333;
+  background-color: #eF6D3A;
   height: 2rem;
 }
 
 #language a {
   position: relative;
   top: 0.45rem;
-  color: #eee;
+  font-weight: normal;
+  color: #111;
 }
 
 #language .close-language {
@@ -139,7 +139,7 @@ label {
 #content h1 {
   margin: 3rem auto 3rem auto;
   padding-left: 0;
-  color: #CF4D1A;
+  color: #eF6D3A;
   font-weight: 500 !important;
   border-bottom: 1px solid #fff;
   font-family: 'Open Sans', sans-serif;
@@ -155,7 +155,7 @@ blockquote p {
 }
 
 cite {
-  color: #4153E6 !important;
+  color: #eF6D3A !important;
   font-size: 1.1rem !important;
 }
 

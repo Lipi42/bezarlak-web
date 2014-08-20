@@ -1,7 +1,6 @@
 $(document).foundation();
 
 var userLang = (navigator.language=='hu' || navigator.userLanguage=='hu') ? 'hu' : 'en';
-userLang = 'hu';
 
 (function(d){
 var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
@@ -57,9 +56,9 @@ App.ApplicationRoute = Ember.Route.extend({
     }
 });
 
-App.IndexView = Ember.View.extend({
-  didInsertElement: function() {
-    this.controller.transitionToRoute('lang.index', userLang);
+App.IndexRoute = Ember.Route.extend({
+  beforeModel: function() {
+    window.location = this.router.generate('lang.index', userLang);
   }
 });
 
@@ -72,6 +71,18 @@ App.LangRoute = Ember.Route.extend({
             });
         });
     },
+
+    actions: {
+        closeLanguage: function() {
+            $("#language").slideUp("slow");
+            $("footer .language").show("slow");
+        },
+
+        changeLanguage: function() {
+            new_lang = (this.currentModel.lang == 'hu') ? 'en' : 'hu';
+            window.location = this.router.generate('lang.index', new_lang);
+        }
+    }
 });
 App.LangView = Ember.View.extend({
     didInsertElement: function() {
@@ -81,20 +92,6 @@ App.LangView = Ember.View.extend({
             this.controller.send('closeLanguage');
         }, 5000);
     },
-});
-App.LangController = Ember.ObjectController.extend({
-    actions: {
-        closeLanguage: function() {
-            $("#language").slideUp("slow");
-            $("footer .language").show("slow");
-        },
-
-        changeLanguage: function() {
-            new_lang = (this.get('model').lang == 'hu') ? 'en' : 'hu';
-            this.transitionToRoute('lang.index', new_lang);
-            Ember.run.later(this, function() { location.reload(); }, 200);
-        }
-    }
 });
 App.SzobakView = Ember.View.extend({
   didInsertElement: function() {
