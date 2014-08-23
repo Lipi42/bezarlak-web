@@ -1,6 +1,7 @@
 $(document).foundation();
 
-var userLang = (navigator.language=='hu' || navigator.userLanguage=='hu') ? 'hu' : 'en';
+var userLang = (window.navigator.language=='hu' || window.navigator.userLanguage=='hu' || navigator.userLanguage=='hu' || navigator.language=='hu') ? 'hu' : 'en';
+userLang = 'hu';
 
 (function(d){
 var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];

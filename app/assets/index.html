@@ -30,18 +30,14 @@
   <div class="off-canvas-wrap" data-offcanvas>
 
   <div class="inner-wrap">
-  <div id="mobilebg" style="background-color: #5d5459; position: fixed; width: 100%; height: 100%;" class="show-for-small-only">
-  </div>
+  
+    <div id="mobilebg" style="background-color: #5d5459; position: fixed; width: 200%; height: 200%; overflow: hidden;" class="show-for-small-only">
+    </div>
 
     <video autoplay loop poster="/video/science.jpg" id="bgvid" class="hide-for-small-only">
       <source src="/video/science.webm" type="video/webm">
       <source src="/video/science.mp4" type="video/mp4">
     </video>
-
-    <div id="language">
-      <a class="switch-language" {{action changeLanguage}}>{{t menu.nyelv}}</a>
-      <a class="close-language" {{action closeLanguage}}>&#215;</a>
-    </div>
 
     <nav class="hide-for-medium-up tab-bar" data-topbar>
       <div class="row">
@@ -54,6 +50,11 @@
           </section>
       </div>
     </nav>
+
+    <div id="language">
+      <a class="switch-language" {{action changeLanguage}}>{{t menu.nyelv}}</a>
+      <a class="close-language" {{action closeLanguage}}>&#215;</a>
+    </div>
 
     <aside class="right-off-canvas-menu hide-for-medium-up">
       <ul class="off-canvas-list">
